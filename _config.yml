@@ -3,9 +3,9 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Hydeout
-tagline:          'A Jekyll theme'
-description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
+title:            Gentle Kotlin
+tagline:          'A gentle start to Kotlin'
+description:      'Gentle Kotlin is a set of tutorials and resources for getting into Kotlin'
 url:              https://fongandrew.github.io
 baseurl:          '/hydeout'
                   # the optional subpath of your site, e.g. "/blog"
@@ -15,8 +15,8 @@ baseurl:          '/hydeout'
                   # sidebar_blog_link below.
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name:           'Harsh Deep'
+  url:            https://github.com/harsh183/gentle_kotlin
 
 paginate:         5
 # paginate_path:    '/page:num'
