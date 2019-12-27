@@ -1,6 +1,6 @@
 # Gentle Kotlin
 
-Tutorials and resources aimed towards begineers in Kotlin. 
+Tutorials and resources aimed towards beginners in Kotlin. 
 
 ### Template
 
