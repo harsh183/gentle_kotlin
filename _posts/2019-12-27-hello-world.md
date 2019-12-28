@@ -6,9 +6,11 @@ Let's start with a fun and popular introductory programming example:  printing H
 
 For reasons that will be explained in a future lesson, we need to write this programming statement inside of a main function:
 
-```fun main() {
+```
+fun main() {
 	println("Hello world!")
-}```
+}
+```
 
 Add that bit of code in an empty .kt file, then compile and run!  You should see 'Hello world!' displayed on the console.
 
