@@ -23,7 +23,7 @@ On top of improving Java, Kotlin also borrows some features from popular languag
 
 ### Android 
 
-The biggest improvement of Kotlin is in Android. As Android quickly became the most popular phone OS used by billions, Android for Java had to grow and change with it, becoming an overall clunky mess with bolted on layers. Java was not meant to be a language for this. People were not happy, creating tools like React Native, Xamarin, Cordova, Dart/Flutter. Turns out just improving the language itself went very far.
+The biggest improvement of Kotlin is in Android. As Android quickly became the most popular phone OS used by billions, Android for Java had to grow and change with it, becoming an overall clunky mess with bolted on layers. Java was not meant to be a language for this. People were not happy, creating tools like React Native, Xamarin, Cordova, Dart/Flutter. Turns out just improving the language itself was all that was needed.
 
 It's hard to describe how much of a drastic improvement it is, but after it writing Android the old way will feel extremely tedious.
 
