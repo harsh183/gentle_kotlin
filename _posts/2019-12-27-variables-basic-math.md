@@ -50,7 +50,7 @@ var myName = "Bill Gates"
 
 'foo' is an immutable Int set to the value of 100; Ints are typically used for storing whole numbers.
 
-'dummy' is an immutable Double set to a mixed decimal value of 72.56; as you can infer, Doubles are typically used for fractional and decimal values in programs.
+'dummy' is an immutable Double set to a mixed decimal value of 72.56; as you can infer, Doubles are typically used for fractional and decimal values.
 
 'isCorrect' is a Boolean, a type that only has two possible values:  true or false.  Booleans come in handy more often than one might think; for example, say your program grades students' exams and you want to know whether a student's answer to a question was correct.  You might store the answer to that question in a Boolean!
 
@@ -58,4 +58,19 @@ Lastly, the variable 'myName' is a String.  A String in Kotlin is simply text; c
 
 # Math Operators
 
+Kotlin supports the standard set of arithmetic operators, such as addition, subtraction, multiplication, and division!  Here's some examples:
 
+```kotlin
+val foo1: Int = 7
+val foo2: Int = 11
+val pos: Int = foo1 + foo2
+println(pos) // prints 18
+val neg: Int = foo1 - foo2
+println(neg) // prints -4
+val rem: Int = 12 % 2
+println(rem) // prints 0
+val div: Int = 12 / 5
+println(div) // prints 2
+```
+
+The '%' symbol on line 7 is called the modulus operator.  When given the statement a % b, the modulus operator returns the remainder of a divided by b.  Hence, the Kotlin val 'rem' stores 0 since the remainder from 12 / 2 is 0.
