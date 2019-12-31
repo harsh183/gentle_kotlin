@@ -8,20 +8,20 @@ title:  Variables, Values, and Basic Math
 A variable is a way to store data or information in our code; what we store can be of numerous types.  Let's look at the following example:
 
 ```kotlin
-var a: Int = 1
-var b = 6 
-var c = 3.14
-var d: Int
-d = 9
+var firstExample: Int = 1
+var secondExample = 6 
+var thirdExample = 6.59
+var fourthExample: Int
+fourthExample = 9
 ```
 
-In the first line, we made a variable (denoted as 'var') and stored the value 1 in it.  Its type is declared as an Int, or integer, meaning that it can be any positive or negative whole number, as well as 0.  So, variables have a type, a name, and (usually) a value.
+In the first line, we made a variable (denoted as 'var'), gave it the name 'firstExample', and stored the value 1 in it.  Its type is declared as an Int, or integer, meaning that it can be any positive or negative whole number, as well as 0.  So, variables have a type, a name, and (usually) a value.
 
-In the second line, we initialized a variable 'b' with value 6; even though the type wasn't explicitly declared, the Kotlin compiler implicitly identifies 'b' as an Int.  It isn't required to declare the type of a variable.
+In the second line, we initialized a variable 'secondExample' with value 6; even though the type wasn't explicitly declared, the Kotlin compiler implicitly identifies 'secondExample' as an Int.  It isn't required to declare the type of a variable.
 
-'c' stores a double, a fractional number represented with decimal places.  While 6 was an Int, 3.14 and 6.0 are doubles since they require a decimal point.
+'thirdExample' stores a double, a fractional number represented with decimal places.  While 6 was an Int, 6.59 (and 6.00) is a double since it requires a decimal point.
 
-Variable 'd' needs an explicit type since we didn't set its value when declaring it; we initialize it in the next line by giving it a value of 6.
+'fourthExample' needs an explicit type since we didn't set its value when declaring it; we initialize it in the next line by giving it a value of 9.
 
 # Values
 
@@ -73,7 +73,7 @@ What do vars x, y, and z represent?  You can make some inferences if you're give
 ```kotlin
 var salesTax: Double = 1.10
 var retailPrice: Double = 50.00
-var totalDue: Double = x * y
+var totalDue: Double = salesTax * retailPrice
 ```
 
 Now the person reading this code can say that the program was written for a sales clerk who wants to calculate the final price after sales tax.  While this example may be simple, imagine having to decipher 700-1000 lines of code, for which all of the variables were named 1, 2, 3, etc. Yeah.
@@ -86,24 +86,24 @@ If you want more details on the camel case rules, check out [Geeks for Geeks](ht
 
 # Math Operators
 
-Kotlin supports the standard set of arithmetic operators, such as addition, subtraction, multiplication, and division!  Here's some examples:
+Kotlin supports the standard set of arithmetic operators, such as addition, subtraction, multiplication, and division!  Here are some examples:
 
 ```kotlin
 val foo1: Int = 7
 val foo2: Int = 11
-val pos: Int = foo1 + foo2
-println(pos) // prints 18
-val neg: Int = foo1 - foo2
-println(neg) // prints -4
-val mult = 2 * 4
-println(val) // prints 8
-val rem: Int = 12 % 2
-println(rem) // prints 0
-val div: Int = 12 / 5
-println(div) // prints 2
+val positiveNum: Int = foo1 + foo2
+println(positiveNum) // prints 18
+val negativeNum: Int = foo1 - foo2
+println(negativeNum) // prints -4
+val product = 2 * 4
+println(product) // prints 8
+val remainder: Int = 12 % 2
+println(remainder) // prints 0
+val quotient: Int = 12 / 5
+println(quotient) // prints 2
 ```
 
-The '%' symbol on line 7 is called the modulus operator.  When given the statement a % b, the modulus operator returns the remainder of a divided by b.  Hence, the Kotlin val 'rem' stores 0 since the remainder from 12 / 2 is 0.
+The '%' symbol on line 7 is called the modulus operator.  When given the statement a % b, the modulus operator returns the remainder of a divided by b.  Hence, the Kotlin val 'remainder' stores 0 since the remainder from 12 / 2 is 0.
 
 # Links
 
