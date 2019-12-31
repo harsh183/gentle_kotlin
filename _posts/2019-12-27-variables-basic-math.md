@@ -5,7 +5,7 @@ title:  Variables, Values, and Basic Math
 
 # Variables
 
-A variable is a way to store data or information when we code; what we store can be of numerous types.  Let's look at the following example:
+A variable is a way to store data or information in our code; what we store can be of numerous types.  Let's look at the following example:
 
 ```kotlin
 var a: Int = 1
@@ -25,7 +25,7 @@ Variable 'd' needs an explicit type since we didn't set its value when declaring
 
 # Values
 
-Values are immutable variables, or variables that can't be changed over time.  While normal variables can be changed and reset, values are protected after being initialized and can't be reassigned.
+Values are immutable variables, or variables that can't be changed over time.  While normal variables can be changed and reset, values can't be reassigned after initialization.
 
 A real-life example would be pi:  by definition pi is a constant, and we can use it for numerous calculations, such as the diameter of a circle.
 
@@ -33,7 +33,7 @@ A real-life example would be pi:  by definition pi is a constant, and we can use
 val PI = 3.14
 ```
 
-Using Kotlin vals is good coding practice and can lead to more readable code. 
+Using Kotlin vals is good coding practice and can lead to more readable code.  We can use immutable variables for values that we know won't change throughout the lifetime of a program.  As such, this optimizes the computer since it doesn't have to account for reassignments.  We want our code to make sense to us, too; while declaring PI as a Kotlin variable is acceptable, it is more appropriate to store it in a val so that it functions solely as a constant.  We can also test our own code with a lot more accuracy since Kotlin vals ensure less of a gray area with what happens in our own program.
 
 <!--- might add more later -->
 
@@ -67,6 +67,8 @@ val pos: Int = foo1 + foo2
 println(pos) // prints 18
 val neg: Int = foo1 - foo2
 println(neg) // prints -4
+val mult = 2 * 4
+println(val) // prints 8
 val rem: Int = 12 % 2
 println(rem) // prints 0
 val div: Int = 12 / 5
