@@ -11,9 +11,8 @@ A variable is a way to store data or information when we code; what we store can
 var a: Int = 1
 var b = 6 
 var c = 3.14
-var d = "hey there"
-var e: Int
-e = 9
+var d: Int
+d = 9
 ```
 
 In the first line, we made a variable (denoted as 'var') and stored the value 1 in it.  Its type is declared as an Int, or integer, meaning that it can be any positive or negative whole number, as well as 0.  So, variables have a type, a name, and (usually) a value.
@@ -22,9 +21,7 @@ In the second line, we initialized a variable 'b' with value 6; even though the 
 
 'c' stores a double, a fractional number represented with decimal places.  While 6 was an Int, 3.14 and 6.0 are doubles since they require a decimal point.
 
-Variable, 'd', stores a string, which is quite literally text surrounded in quotes.  As you can see, variables can store many representations of data.  We can create a var named 'mean' that stores the mean of a data set we're using, or it can store the email addresses of people using an application. 
-
-Variable 'e' needs a type since we didn't set its value when declaring it; we initialize it in the next line by giving it a value of 6.
+Variable 'd' needs an explicit type since we didn't set its value when declaring it; we initialize it in the next line by giving it a value of 6.
 
 # Values
 
@@ -42,7 +39,22 @@ Using Kotlin vals is good coding practice and can lead to more readable code.
 
 # Types of Variables and Values
 
-The official Kotlin site has a great [description](https://kotlinlang.org/docs/reference/basic-types.html) of the different primitive types used in Kotlin.  The types most commonly used among coders are Ints, Doubles, and Booleans.
+The official Kotlin site has a great [description](https://kotlinlang.org/docs/reference/basic-types.html) of the different primitive types used in Kotlin.  The types most commonly used among coders are Ints, Doubles, and Booleans, and Strings.
+
+```kotlin
+val foo: Int = 100
+val dummy: Double = 72.56
+var isCorrect = true
+var myName = "Bill Gates"
+```
+
+'foo' is an immutable Int set to the value of 100; Ints are typically used for storing whole numbers.
+
+'dummy' is an immutable Double set to a mixed decimal value of 72.56; as you can infer, Doubles are typically used for fractional and decimal values in programs.
+
+'isCorrect' is a Boolean, a type that only has two possible values:  true or false.  Booleans come in handy more often than one might think; for example, say your program grades students' exams and you want to know whether a student's answer to a question was correct.  You might store the answer to that question in a Boolean!
+
+Lastly, the variable 'myName' is a String.  A String in Kotlin is simply text; conventionally, we call a String literal a "string" of text surrounded in quotes.  So, 'myName' is a String that stores the String literal "Bill Gates." 
 
 # Math Operators
 
