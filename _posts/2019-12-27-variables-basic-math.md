@@ -54,7 +54,33 @@ var myName = "Bill Gates"
 
 'isCorrect' is a Boolean, a type that only has two possible values:  true or false.  Booleans come in handy more often than one might think; for example, say your program grades students' exams and you want to know whether a student's answer to a question was correct.  You might store the answer to that question in a Boolean!
 
-Lastly, the variable 'myName' is a String.  A String in Kotlin is simply text; conventionally, we call a String literal a "string" of text surrounded in quotes.  So, 'myName' is a String that stores the String literal "Bill Gates." 
+Lastly, the variable 'myName' is a String.  A String in Kotlin is simply text; conventionally, we call a String literal a "string" of text surrounded in quotes.  So, 'myName' is a String that stores the String literal "Bill Gates."
+
+## Variable Naming
+
+### Why it's Important
+
+The variables from the examples throughout this post are named fairly poorly; as you will learn throughout your coding experiences, the names given to variables are often neglected.  If you're reading someone's Kotlin project and every variable is just the next letter in the alphabet, how easy would it be to explain every line of their code?  Here's an example:
+
+```kotlin
+var x: Double = 1.10
+var y: Double = 50.00
+var z: Double = x * y
+```
+
+What do vars x, y, and z represent?  You can make some inferences if you're given more context and the application of these lines of code, but it's much easier to have your code look like this:
+
+```kotlin
+var salesTax: Double = 1.10
+var retailPrice: Double = 50.00
+var totalDue: Double = x * y
+```
+
+Now the person reading this code can say that the program was written for a sales clerk who wants to calculate the final price after sales tax.  While this example may be simple, imagine having to decipher 700-1000 lines of code, for which all of the variables were named 1, 2, 3, etc. Yeah.
+
+## Naming Conventions
+
+Java programmers use what is known as the "camel case" standard:  the first word in the variable name is lower case, while the first letter of every word following is capitalized.  In the example above, we had a variable that stored the sales tax multiplier, so we called the variable salesTax (we also could have named the variable salesTaxMultiplier, but it's a little long).  Try to keep the camel case standard throughout your programs; remember, you want your code to be as clean and consistent as possible!
 
 # Math Operators
 
