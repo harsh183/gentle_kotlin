@@ -78,9 +78,11 @@ var totalDue: Double = x * y
 
 Now the person reading this code can say that the program was written for a sales clerk who wants to calculate the final price after sales tax.  While this example may be simple, imagine having to decipher 700-1000 lines of code, for which all of the variables were named 1, 2, 3, etc. Yeah.
 
-## Naming Conventions
+### namingConventions
 
 Java programmers use what is known as the "camel case" standard:  the first word in the variable name is lower case, while the first letter of every word following is capitalized.  In the example above, we had a variable that stored the sales tax multiplier, so we called the variable salesTax (we also could have named the variable salesTaxMultiplier, but it's a little long).  Try to keep the camel case standard throughout your programs; remember, you want your code to be as clean and consistent as possible!
+
+If you want more details on the camel case rules, check out [Geeks for Geeks](https://www.geeksforgeeks.org/java-naming-conventions/).  There is a lot of information in that particular article that may not be relevant for you yet, but it delves into some good examples with variable naming.
 
 # Math Operators
 
@@ -106,3 +108,5 @@ The '%' symbol on line 7 is called the modulus operator.  When given the stateme
 # Links
 
 [Kotlin's Primitive Types](https://kotlinlang.org/docs/reference/basic-types.html)
+
+[Java's Naming Conventions](https://www.geeksforgeeks.org/java-naming-conventions/)
