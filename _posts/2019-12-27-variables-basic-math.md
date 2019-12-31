@@ -74,3 +74,7 @@ println(div) // prints 2
 ```
 
 The '%' symbol on line 7 is called the modulus operator.  When given the statement a % b, the modulus operator returns the remainder of a divided by b.  Hence, the Kotlin val 'rem' stores 0 since the remainder from 12 / 2 is 0.
+
+# Links
+
+[Kotlin's Primitive Types](https://kotlinlang.org/docs/reference/basic-types.html)
