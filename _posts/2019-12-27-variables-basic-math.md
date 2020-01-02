@@ -12,11 +12,11 @@ var firstExample: Int = 1
 var secondExample = 6 
 ```
 
-In the first line, we made a variable (denoted as 'var'), gave it the name 'firstExample', and stored the value 1.  Its type is also declared as an Int, short for integer.  So variables have a type, a name, and (usually) a value.
+In the first line, we made a variable (denoted as 'var'), gave it the name 'firstExample', and stored the value 1.  Its type is also declared as an Int, short for integer.  So variables have a type, a name, and (usually) a value.  Let's delve into some basic primitive types in Kotlin.
 
 ## Types of Variables
 
-The official Kotlin site has a great [description](https://kotlinlang.org/docs/reference/basic-types.html) of all the primitive types used in Kotlin.  The ones most commonly used among coders are Ints, Doubles, and Booleans, and Strings.
+The official Kotlin site has a great [description](https://kotlinlang.org/docs/reference/basic-types.html) of all the primitive types used in Kotlin; the ones most commonly used are Ints, Doubles, and Booleans, and Strings.
 
 ```kotlin
 var foo: Int = 100
@@ -32,6 +32,8 @@ var myName = "Bill Gates"
 'isCorrect' is a Boolean, a type that only has two possible values:  true or false.  Booleans come in handy more often than one might think; for example, say you built a program that grades students' exams and you want to know whether a student's answer to a question was correct.  You might store this property in a series of Boolean variables for every question, with `true` being that the student answered correctly, and `false` being that they didn't.
 
 Lastly, the variable 'myName' is a String.  A String in Kotlin is simply text; conventionally, we call a String literal a "string" of text surrounded in quotes.  So, 'myName' is a String that stores the String literal "Bill Gates."
+
+### When Types are Required
 
 ```kotlin
 var thirdExample: Int
