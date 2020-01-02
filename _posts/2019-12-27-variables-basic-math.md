@@ -10,53 +10,35 @@ A variable is a way to store data or information in our code, and what we store 
 ```kotlin
 var firstExample: Int = 1
 var secondExample = 6 
-var thirdExample = 6.59
-var fourthExample: Int
-fourthExample = 9
 ```
 
-In the first line, we made a variable (denoted as 'var'), gave it the name 'firstExample', and stored the value 1 in it.  Its type is also declared as an Int, or integer, meaning that it can be any positive or negative whole number, as well as 0.  So variables have a type, a name, and (usually) a value.  We will explain why the names are the way they are later in this post.
+In the first line, we made a variable (denoted as 'var'), gave it the name 'firstExample', and stored the value 1.  Its type is also declared as an Int, short for integer.  So variables have a type, a name, and (usually) a value.
 
-In the second line, we initialized a variable 'secondExample' with value 6; even though the type wasn't explicitly declared, the Kotlin compiler implicitly identifies 'secondExample' as an Int.  It isn't required to declare the type of a variable.
-
-'thirdExample' stores a double, a fractional number represented by a decimal value.  While 6 was an Int, 6.59 (and even 6.00) is a double since it has a decimal point.
-
-When we declared 'fourthExample' we didn't provide a stored value for it, so we had to list an explicit type; we initialize its value in the next line by giving it a value of 9.
-
-# Values
-
-Values are immutable variables, or variables that can't be changed over time.  While normal variables can be changed and reset, values can't be reassigned after initialization.
-
-A real-life example would be pi:  by definition, pi is a constant, and we can use it for numerous calculations, such as the diameter of a circle.
-
-```kotlin
-val PI = 3.14
-```
-
-Using Kotlin vals is good coding practice and can lead to more readable code.  We can use immutable variables for values that we know won't change throughout the lifetime of a program.  As such, this optimizes the computer since it doesn't have to account for reassignments.
-
-We want our code to make sense to us, too; while declaring PI as a Kotlin variable is acceptable, it is more appropriate to store it in a val so that it functions solely as a constant.  We can also test our own code with a lot more accuracy since Kotlin vals ensure less of a gray area with what happens in our own program.
-
-<!--- might add more later -->
-
-# Types of Variables and Values
+## Types of Variables
 
 The official Kotlin site has a great [description](https://kotlinlang.org/docs/reference/basic-types.html) of all the primitive types used in Kotlin.  The ones most commonly used among coders are Ints, Doubles, and Booleans, and Strings.
 
 ```kotlin
-val foo: Int = 100
-val dummy: Double = 72.56
+var foo: Int = 100
+var dummy: Double = 72.56
 var isCorrect = true
 var myName = "Bill Gates"
 ```
 
-'foo' is an immutable Int set to the value of 100; Ints are typically used for storing whole numbers.
+'foo' is an Int set to the value of 100; Ints are typically used for storing whole numbers.
 
-'dummy' is an immutable Double set to a mixed decimal value of 72.56; as you can infer, Doubles are typically used for fractional and decimal values.
+'dummy' is a Double set to a mixed decimal value of 72.56; as you can infer, Doubles are typically used for fractional and decimal values.
 
 'isCorrect' is a Boolean, a type that only has two possible values:  true or false.  Booleans come in handy more often than one might think; for example, say you built a program that grades students' exams and you want to know whether a student's answer to a question was correct.  You might store this property in a series of Boolean variables for every question, with `true` being that the student answered correctly, and `false` being that they didn't.
 
 Lastly, the variable 'myName' is a String.  A String in Kotlin is simply text; conventionally, we call a String literal a "string" of text surrounded in quotes.  So, 'myName' is a String that stores the String literal "Bill Gates."
+
+```kotlin
+var thirdExample: Int
+thirdExample = 9
+```
+
+If we don't store a value in a variable when declaring it, the compiler forces us to list an explicit type.  For the variable 'thirdExample', we initialize its value in the next line by giving it a value of 9.
 
 ## Variable Naming
 
@@ -85,6 +67,22 @@ There are two main rules to variable naming:  1) Variables are named after what 
 With the "camel case" standard, the first word in the variable name is lower case, while the first letter of every word following is capitalized.  In the example above, we had a variable that stored the sales tax multiplier, so we called the variable salesTax (there are numerous possibilities for the name, but it's up to the programmer and her/his style choice).  Make sure to keep the camel case standard throughout your programs; remember, you want your code to be as clean and consistent as possible!
 
 If you want more details on the camel case rules, check out [Geeks for Geeks](https://www.geeksforgeeks.org/java-naming-conventions/).  There is a lot of information in that particular article that may not be relevant for you yet, but it delves into some good examples with variable naming.
+
+# Values
+
+Values are immutable variables, or variables that can't be changed over time.  While normal variables can be changed and reset, values can't be reassigned after initialization.
+
+A real-life example would be pi:  by definition, pi is a constant, and we can use it for numerous calculations, such as the diameter of a circle.
+
+```kotlin
+val pi = 3.14
+```
+
+Using Kotlin vals is good coding practice and can lead to more readable code.  We can use immutable variables for values that we know won't change throughout the lifetime of a program.  As such, this optimizes the computer since it doesn't have to account for reassignments.
+
+We want our code to make sense to us, too; while declaring PI as a Kotlin variable is acceptable, it is more appropriate to store it in a val so that it functions solely as a constant.  We can also test our own code with a lot more accuracy since Kotlin vals ensure less of a gray area within in our own program.
+
+<!--- might add more later -->
 
 # Math Operators
 
