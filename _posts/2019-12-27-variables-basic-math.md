@@ -15,7 +15,7 @@ var fourthExample: Int
 fourthExample = 9
 ```
 
-In the first line, we made a variable (denoted as 'var'), gave it the name 'firstExample', and stored the value 1 in it.  Its type is also declared as an Int, or integer, meaning that it can be any positive or negative whole number, as well as 0.  So variables have a type, a name, and (usually) a value.
+In the first line, we made a variable (denoted as 'var'), gave it the name 'firstExample', and stored the value 1 in it.  Its type is also declared as an Int, or integer, meaning that it can be any positive or negative whole number, as well as 0.  So variables have a type, a name, and (usually) a value.  We will explain why the names are the way they are later in this post.
 
 In the second line, we initialized a variable 'secondExample' with value 6; even though the type wasn't explicitly declared, the Kotlin compiler implicitly identifies 'secondExample' as an Int.  It isn't required to declare the type of a variable.
 
@@ -62,15 +62,13 @@ Lastly, the variable 'myName' is a String.  A String in Kotlin is simply text; c
 
 ### Why it's Important
 
-The variables from the examples throughout this post are named fairly poorly; as you will learn throughout your coding experiences, the names given to variables are often neglected.  If you're reading someone's Kotlin project and every variable is just the next letter in the alphabet, how easy would it be to explain every line of their code?  Here's an example:
-
 ```kotlin
 var x: Double = 1.10
 var y: Double = 50.00
 var z: Double = x * y
 ```
 
-What do vars x, y, and z represent?  You can make some inferences if you're given more context and the application of these lines of code, but it's much easier to have your code look like this:
+As you will learn throughout your coding experiences, the names given to variables are often neglected.  If you're reading through someone's code and every variable is named with letters from the alphabet, imagine how difficult it would it be to explain every line of their code.  In this example, what do vars x, y, and z represent?  You can make some inferences if you're given more context and the application of these lines of code, but it's much easier to have your code look like this:
 
 ```kotlin
 var salesTax: Double = 1.10
@@ -78,34 +76,36 @@ var retailPrice: Double = 50.00
 var totalDue: Double = salesTax * retailPrice
 ```
 
-Now the person reading this code can say that the program was written for a sales clerk who wants to calculate the final price after sales tax.  While this example may be simple, imagine having to decipher 700-1000 lines of code, for which all of the variables were named 1, 2, 3, etc. Yeah.
+Now the person reading this code can say that the program could have been written for a sales clerk who wants to calculate the paid amount due for every customer.  While this example may be simple, having to decipher, say, 700-1000 lines of code, throughout which all of the variables were named 1, 2, 3, etc. would be outrageously frustrating!
 
 ### namingConventions
 
-Java programmers use what is known as the "camel case" standard:  the first word in the variable name is lower case, while the first letter of every word following is capitalized.  In the example above, we had a variable that stored the sales tax multiplier, so we called the variable salesTax (we also could have named the variable salesTaxMultiplier, but it's a little long).  Try to keep the camel case standard throughout your programs; remember, you want your code to be as clean and consistent as possible!
+There are two main rules to variable naming:  1) Variables are named after what they do, and 2) naming follows the camel case rule.
+
+With the "camel case" standard, the first word in the variable name is lower case, while the first letter of every word following is capitalized.  In the example above, we had a variable that stored the sales tax multiplier, so we called the variable salesTax (there are numerous possibilities for the name, but it's up to the programmer and her/his style choice).  Make sure to keep the camel case standard throughout your programs; remember, you want your code to be as clean and consistent as possible!
 
 If you want more details on the camel case rules, check out [Geeks for Geeks](https://www.geeksforgeeks.org/java-naming-conventions/).  There is a lot of information in that particular article that may not be relevant for you yet, but it delves into some good examples with variable naming.
 
 # Math Operators
 
-Kotlin supports the standard set of arithmetic operators, such as addition, subtraction, multiplication, and division!  Here are some examples:
+Kotlin supports the standard set of arithmetic operators, such as addition, subtraction, multiplication, and division for any of its **numeric** types (such as Ints, Doubles, Floats, etc.):
 
 ```kotlin
-val foo1: Int = 7
-val foo2: Int = 11
-val positiveNum: Int = foo1 + foo2
-println(positiveNum) // prints 18
-val negativeNum: Int = foo1 - foo2
-println(negativeNum) // prints -4
-val product = 2 * 4
-println(product) // prints 8
-val remainder: Int = 12 % 2
-println(remainder) // prints 0
-val quotient: Int = 12 / 5
-println(quotient) // prints 2
+1: val foo1: Int = 7
+2: val foo2: Int = 11
+3: val positiveNum: Int = foo1 + foo2
+4: println(positiveNum) // prints 18
+5: val negativeNum: Int = foo1 - foo2
+6: println(negativeNum) // prints -4
+7: val product = 2 * 4
+8: println(product) // prints 8
+9: val remainder: Int = 12 % 2
+10: println(remainder) // prints 0
+11: val quotient: Int = 12 / 5
+12: println(quotient) // prints 2
 ```
 
-The '%' symbol on line 7 is called the modulus operator.  When given the statement a % b, the modulus operator returns the remainder of a divided by b.  Hence, the Kotlin val 'remainder' stores 0 since the remainder from 12 / 2 is 0.
+While most of the operators should be familiar to you, the one on line 9 may not! The '%' symbol is called the modulus operator.  The statement a % b returns the remainder of a divided by b.  Hence, the val we declared called 'remainder' stores 0 since the remainder of 12 / 2 is 0.
 
 # Links
 
