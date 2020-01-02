@@ -5,11 +5,10 @@ title:  Variables, Values, and Basic Math
 
 # Introduction to Variables
 
-A variable is a way to store data or information in our code, and what we store can be of numerous types.  Let's look at the following example:
+A variable is a way to store data or information in our code, and what we store can be of numerous types.  Let's look at a simple example:
 
 ```kotlin
 var firstExample: Int = 1
-var secondExample = 6 
 ```
 
 In the first line, we made a variable (denoted as 'var'), gave it the name 'firstExample', and stored the value 1.  Its type is also declared as an Int, short for integer.  So variables have a type, a name, and (usually) a value.  Let's delve into some basic primitive types in Kotlin.
@@ -20,12 +19,13 @@ The official Kotlin site has a great [description](https://kotlinlang.org/docs/r
 
 ```kotlin
 var foo: Int = 100
+var basicInt = 6
 var dummy: Double = 72.56
-var isCorrect = true
-var myName = "Bill Gates"
+var isCorrect: Boolean = true
+var myName: String = "Bill Gates"
 ```
 
-'foo' is an Int set to the value of 100; Ints are typically used for storing whole numbers.
+'foo' is an Int set to the value of 100; Ints are typically used for storing whole numbers.  While 'basicInt' doesn't have an explicit type, the Kotlin compiler knows that it is of type Int since we assigned an integer value to it.  Even though types aren't required, it's good practice to always list a type when declaring a variable, as it leads to more readable code.
 
 'dummy' is a Double set to a mixed decimal value of 72.56; as you can infer, Doubles are typically used for fractional and decimal values.
 
