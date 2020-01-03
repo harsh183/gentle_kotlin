@@ -10,3 +10,6 @@ Some but not all tasks to do
 * figure out how to make the posts seem less dry
 * SEO the site someday idkk so much effort lol 
 * Make the comment section work nicely. 
+* For IO lesson run all programs and show their output
+* Also put a how to read this tutorial follow along thing. 
+* Verify that comments work fine. 

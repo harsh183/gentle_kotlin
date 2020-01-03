@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Basic input output"
+title: "Console input output"
 ---
 
 The fundamental difference between all the machines that came before computers
@@ -93,12 +93,64 @@ This is when we start getting in true interactivity. Let's have a user enter the
 ```kotlin
 fun main() {
     println("What is your name?")
-    val name = readLine()
+    val name: String = readLine()!!
     println("Hello $name")
 }
 ```
 
 `readLine()` is like the opposite of `println()` where it takes an entire line of user input from them. So it reads everything in that line after the user hits enter. Try running this program a few times with different values so you get an idea of how it changes with different names you enter. 
 
+Another interesting thing we see here is the double exclaimation mark `!!`. It looks like Kotlin is screaming at you quite loudly in fact. And rightly so, `!!` indicates that this function might be empty and that can cause an error and so we have the program stop and display the error to us then. 
+
+More technically, many programming languages have a concept called `null`, which is how computers say 'nothing'. Our program here can't really work if someone's name turns out to be empty so this makes sure that does not happoen.
+
+In later posts, I'll show better and safer ways of dealing with `null` which Kotlin is quite well known for avoiding many of the common pitfalls with dealing with null. <!-- Should we link the million dollar mistake -->  
+
 ### With non strings
+
+At the end of the day, anything a user enters on the console is a `String`, so if we want users to enter in numbers like `Int` or `Float` what we do is that we first use `readLine()!!` to collect the `String` and then use converter methods to make it into the number types that we like.
+
+It's quite often that you get strings from various types of inputs so knowing this basic conversions can get you quite far. 
+
+They're fairly easy to remember `toInt()` to convert something to an `Int` and `toDouble()` to convert something to a `Double`
+
+```kotlin
+fun main() {
+   val whole: String = "42"
+   val decimal: String = "4.2"
+
+   val wholeInt: Int = whole.toInt()
+   val wholeDouble: Double = whole.toDouble()
+
+   println("$whole as Int is $wholeInt and as Double is $wholeDouble")
+   
+   val decimalInt: Int = decimalNumber.toInt()
+   val decimalDouble: Double = decimalNumber.toDouble()
+
+   println("$decimal as Int is $decimalInt and as Double is $decimalDouble")
+}
+```
+
+Note how in `decimal` to `decimalInt` it loses out the part after the decimal point because `Int` is for whole numbers only.
+
+Now if we combine this with the `readLine()!!` from earlier, this can be a really effective one liner to enter in `Int` and `Double`.
+
+```kotlin
+fun main() {
+    println("Welcome to made up example tax calulator")
+    println("Enter your salary rounded to the nearest number")
+    val salary: Int = readLine()!!.toInt()
+
+    println("Enter the tax rate from 0.0 to 1.0")
+    val taxRate: Double = readLine()!!.toDouble()
+
+    val tax: Double = salary * taxRate
+    println("Your taxes this year are $tax")
+} 
+```
+
+Oh if only taxes were this simple. 
+
+
+
 
