@@ -2,7 +2,6 @@
 layout:  post
 title:  Hello World
 ---
-# Printing Hello World!
 
 Let's start with a fun and popular introductory programming example:  printing Hello world! to the console.  To do so in Kotlin, we use the `println()` function.  It takes any text in quotes and prints it to the console. 
 
