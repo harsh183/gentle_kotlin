@@ -6,12 +6,15 @@ highlighter:      rouge
 title:            Gentle Kotlin
 tagline:          'A gentle start to Kotlin'
 description:      'Gentle Kotlin is a set of tutorials and resources for getting into Kotlin'
-url:              https://fongandrew.github.io
+url:              https://gentlekotlin.com
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
+
+disqus: 
+  shortname: gentlekotlin.disqus.com
 
 author:
   name:           'Harsh Deep'
