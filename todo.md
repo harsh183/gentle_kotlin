@@ -9,3 +9,4 @@ Some but not all tasks to do
 * Make the page show just titles and in reverse order
 * Figure out a better color scheme
 * figure out how to make the posts seem less dry
+* SEO the site someday idkk so much effort lol 
