@@ -88,25 +88,17 @@ Note: If you are following this on an online IDE, the Kotlin Playground does not
 
 This is when we start getting in true interactivity. Let's have a user enter their name and then we greet them with it.
 
-```
+### With Strings
+
+```kotlin
 fun main() {
     println("What is your name?")
     val name = readLine()
     println("Hello $name")
 }
 ```
+
 `readLine()` is like the opposite of `println()` where it takes an entire line of user input from them. So it reads everything in that line after the user hits enter. Try running this program a few times with different values so you get an idea of how it changes with different names you enter. 
 
-```kotlin
-fun main() {
-    println("What is your first name?")
-    val firstName: String? = readLine()
-    
-    println("What is your last name?")
-    val lastName: String = readLine()!!
-
-    println("Welcome, $firstName $lastName!")
-}
-`
-More confusing is the `?` and `!!`, both the lines for getting the first name and last name are pretty much identical other than that. If you try writing the
+### With non strings
 
