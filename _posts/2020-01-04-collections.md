@@ -13,6 +13,12 @@ A collection is just a container that stores a number of objects.  These objects
 
 ## Types of Collections
 
+### Mutable vs Immutable
+
+Before we go into the different types, we need to talk about the difference between immutable collections and mutable collections.  We mentioned the concept of immutability when we introduced Kotlin values; in that context, we talked about how values are just variables that can't be changed over time.  The same applies with collections!  Once we construct a collection, meaning we add objects to it at the same time we declare it, we can't modify it anymore.  We call immutable collections as read-only collections, which just means that we can read through, or access, its items, without modifying the collection itself.
+
+Mutable collections are just the opposite.  We can remove and add things anytime.  Both mutable and immutable collections are useful for different applications, and we'll give some examples we talk about the different types of collections.
+
 ### Lists
 
 <!-- construct list -->
