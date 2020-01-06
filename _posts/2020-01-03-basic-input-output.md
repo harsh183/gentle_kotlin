@@ -124,14 +124,13 @@ fun main() {
 
    println("$whole as Int is $wholeInt and as Double is $wholeDouble")
    
-   val decimalInt: Int = decimalNumber.toInt()
    val decimalDouble: Double = decimalNumber.toDouble()
 
    println("$decimal as Int is $decimalInt and as Double is $decimalDouble")
 }
 ```
 
-Note how in `decimal` to `decimalInt` it loses out the part after the decimal point because `Int` is for whole numbers only.
+We can't use `toInt()` for `decimal` because it will lose out on that data during conversion and give us an error. 
 
 Now if we combine this with the `readLine()!!` from earlier, this can be a really effective one liner to enter in `Int` and `Double`.
 
