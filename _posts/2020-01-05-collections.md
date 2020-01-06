@@ -59,13 +59,30 @@ To see more documentation on lists in Kotlin, check out [the official Kotlin sit
 
 ### Sets
 
-<!-- might scrap since sets are more advanced -->
+
 
 ### Maps
 
+A map is a collection of keys that point to values, stored as key-value entries.  A key can be of any type, as can a value.  For example, let's say we're storing companies in our program and need a way to easily look up their annual revenues; we can create a map that stores Strings as keys that point to Int values.  Each key is the name of the company and points to an Int that represents that company's value.  With this set up, all it takes is the company's name and the computer will automatically return to us the revenue we're looking for!
+
+```kotlin
+var studentGrades = mapOf("Alice" to 96.7, "Greg" to 90.1, "Jessica" to 89.7)
+studentGrades.put("Max", 94.3)
+studentGrades["Alice"] = 97.0
+```
+
+`Map<K,V>` has a built-in `put` function that allows us to add key-value pairs to mutable maps.  It takes a key and a value, in that order.  If a map is mutable, we can also modify a key's value by using the `[]` operator.
+
+While lists allow us to keep track of objects by numerical indexing, maps give us a more convenient way to model real-life data into our Kotlin programs.
 <!-- explain key-val pairs, how they're different from lists -->
 
 # How We Use Collections
+
+## Lists
+
+
+
+## Maps
 
 # Links
 
