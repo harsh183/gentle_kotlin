@@ -146,7 +146,7 @@ Note as a block `else` is optional but when it's being used as an expression (ex
 
 For when there are more than two branches possible. This has some very powerful syntax better than C-like languages like `switch`
 
-```
+```kotlin
 val age: Int = 19 
 
 val undergradAges: Array<Int> = arrayOf(18, 19, 20, 21, 22)
