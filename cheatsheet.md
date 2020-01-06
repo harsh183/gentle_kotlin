@@ -59,7 +59,7 @@ There are many different built in types for Data in Kotlin. The most important o
 
 ### Converting
 
-Generally it's `to<Type>()` like `toInt()`, `toDouble()`, `toInt()`
+Generally it's `to<Type>()` like `toInt()`, `toDouble()`, `toString()`
 
 ```kotlin
 val x: Int = "42".toInt()
