@@ -57,10 +57,6 @@ println(mutableList) // prints [2, 4, 6, 8, 10, 12]
 
 To see more documentation on lists in Kotlin, check out [the official Kotlin site](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html).  It goes more in detail with the add and remove functions, as well as similar built-in functions that come in handy with lists. 
 
-### Sets
-
-
-
 ### Maps
 
 A map is a collection of keys that point to values, stored as key-value entries.  A key can be of any type, as can a value.  For example, let's say we're storing companies in our program and need a way to easily look up their annual revenues; we can create a map that stores Strings as keys that point to Int values.  Each key is the name of the company and points to an Int that represents that company's value.  With this set up, all it takes is the company's name and the computer will automatically return to us the revenue we're looking for!
@@ -80,9 +76,11 @@ While lists allow us to keep track of objects by numerical indexing, maps give u
 
 ## Lists
 
-
+Unlike maps, lists can contain duplicate entries.  A list functions like a list; we can read from top to bottom using numerical indexing, and add and remove things.  The order doesn't matter unless the list is sorted, so finding a value without knowing its index can mean looking through the entire list.
 
 ## Maps
+
+Maps can't have duplicate keys, which makes values less complicated to find.  With a list, we have to start from either the top or the bottom from the list and work our way through the entire list to find our value.  With maps, if we know the key, we can find the value in one line of code!
 
 # Links
 
