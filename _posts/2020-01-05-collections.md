@@ -57,6 +57,37 @@ println(mutableList) // prints [2, 4, 6, 8, 10, 12]
 
 To see more documentation on lists in Kotlin, check out [the official Kotlin site](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html).  It goes more in detail with the add and remove functions, as well as similar built-in functions that come in handy with lists. 
 
+#### Foreach Loops
+
+Lists are really useful for storing objects and accessing them through something known as a `foreach` loop.  It's called a loop because the code block we write for it repeats itself for EVERY item in the list.  Let's start with a basic example:
+
+```kotlin
+var numbers = listOf(1, 2, 3, 4, 5)
+for (item in numbers) {
+  print(item.toString() + " ")
+}
+```
+The console prints out the following:
+
+```
+1 2 3 4 5 
+```
+
+We can't modify the items in a `foreach` loop, we can access them and read their attributes.  In this case, we access every item and just print them, but we can make `foreach` loops to do a variety of things with just a bit of conditional logic.  We can also access the index of every element by looping through the indices.  The syntax looks like the following:
+
+```kotlin
+var chars = listOf('a', 'b', 'c', 'd')
+for (i in chars.indices) {
+  print(chars[i] + " ")
+}
+```
+
+When run, the code above prints out the following on the console:
+
+```
+0 1 2 3 
+```
+
 ### Maps
 
 A map is a collection of keys that point to values, stored as key-value entries.  A key can be of any type, as can a value.  For example, let's say we're storing companies in our program and need a way to easily look up their annual revenues; we can create a map that stores Strings as keys that point to Int values.  Each key is the name of the company and points to an Int that represents that company's value.  With this set up, all it takes is the company's name and the computer will automatically return to us the revenue we're looking for!
