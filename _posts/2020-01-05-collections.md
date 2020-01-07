@@ -9,9 +9,9 @@ title: Collections
 
 Say we're building an application that takes a picture of food and gives you recipes that use those ingredients.  While this sounds very complex, the first step would be to figure out how to store these food items in our program.  We can do so with something called collections.
 
-A collection is just a container that stores a number of objects.  These objects have to share the same type, so we can't have a collection of Ints, Doubles, and Booleans.  The objects stored in collections are called elements or items.  In our example, we can store a collection of food items represented with String literals! 
+A collection is just a container that stores a number of objects.  These objects have to share the same type, so we can't have a collection of Ints, Doubles, and Booleans.  The objects stored in collections are called elements or items.
 
-How we use this collection depends on what type of collection we construct.  Kotlin provides different kinds of collections that are friendlier to use for different reasons; as such, depending on how you want to store and use objects, you might use a certain type of collection.  Let's delve into the different types.
+How we use this collection depends on what type of collection we construct.  Kotlin provides different kinds of collections that are friendlier to use for different reasons; as such, depending on how you want to store and use objects, you might use a certain type of collection.
 
 ## Types of Collections
 
@@ -71,6 +71,12 @@ The console prints out the following:
 
 ```
 1 2 3 4 5 
+```
+
+Since our for loop only has line of code run for each item in the list, we can actually write the for loop as a single line of code, as opposed to a curly bracket-enclosed block:
+
+```kotlin
+for (item in numbers) print(item.toString() + " ")
 ```
 
 We can't modify the items in a `foreach` loop, we can access them and read their attributes.  In this case, we access every item and just print them, but we can make `foreach` loops to do a variety of things with just a bit of conditional logic.  We can also access the index of every element by looping through the indices.  The syntax looks like the following:
