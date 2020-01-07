@@ -3,8 +3,6 @@
 Some but not all tasks to do
 
 * Setup License right
-* Setup a proper url and include it in `_config`
-* Do something about author name in `_config`.
 * SASS is end of life - todo
 * Make the page show just titles and in reverse order
 * figure out how to make the posts seem less dry
@@ -12,4 +10,4 @@ Some but not all tasks to do
 * Make the comment section work nicely. 
 * For IO lesson run all programs and show their output
 * Also put a how to read this tutorial follow along thing. 
-* Verify that comments work fine. 
+* Move away from the forked repo to it's own for nicer history. Do it *someday* for having better git history and linking. 
