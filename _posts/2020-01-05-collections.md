@@ -3,8 +3,6 @@ layout: post
 title: Collections
 ---
 
-# What are Collections?
-
 ## Real-World Example
 
 Say we're building an application that takes a picture of food and gives you recipes that use those ingredients.  While this sounds very complex, the first step would be to figure out how to store these food items in our program.  We can do so with something called collections.
