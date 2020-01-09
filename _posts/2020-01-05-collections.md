@@ -47,7 +47,7 @@ mutableList[0] = 0 // now the list is 0, 4, 6, 8, 10
 mutableList.removeAt(0) // now the list is 4, 6, 8, 10
 ```
 
-#### Add and Remove
+#### Adding and Removing Elements
 
 From the examples above, you can see that lists have built-in add and remove functions!  `removeAt` takes only one argument:  the index of the element to be removed.  In line 3 of the immutable example, we remove at the 0th index, or the 1st element in the list.  The `add` function takes an element and adds that element to the end of the list by default.  Here's an example:
 
@@ -59,7 +59,7 @@ println(mutableList) // prints [2, 4, 6, 8, 10, 12]
 
 To see more documentation on lists in Kotlin, check out [the official Kotlin site](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html).  It goes more in detail with the add and remove functions, as well as similar built-in functions that come in handy with lists. 
 
-#### Foreach Loops
+#### Iterating through the Elments
 
 Lists are really useful for storing objects and accessing them through something known as a `foreach` loop.  It's called a loop because the code block we write for it repeats itself for EVERY item in the list.  Let's start with a basic example:
 
