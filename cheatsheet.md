@@ -232,17 +232,102 @@ Jessica got 89.7
 
 ## Functions 
 
-## Inline functions
+A simple function with no parameters and no return
 
-## Lambdas
+```kotlin
+fun sayHello(): Unit {
+    println("Hello!")
+}
+```
+
+`Unit` indicated that there is no return, since it's optional we usually write it like
+```kotlin
+fun sayHello() {
+    println("Hello")
+}
+```
+
+### Parameters/Arguments
+
+Seperated by commas like `functionName(name1: Type1, name2: Type2)`
+
+```kotlin
+fun sayHello(from: String, to: String) {
+    println("$from says Hello to $to")
+}
+```
+
+For variable number of arguments (Varargs) we use the `vararg` keyword 
+
+```kotlin
+fun printNumbers(vararg numbers: Int) {
+    for (number in numbers) {
+        print("$number ")
+    }
+    println()
+}  
+
+fun main() {
+    printNumbers(1, 3, 5, 7, 9) // => 1 3 5 7 9
+    printNumbers()              // => 
+    printNumbers(2)             // => 2
+}
+```
+
+### Return 
+
+`return` brings the control back to the function that called it.
+
+```kotlin
+fun average(numbers: List<Double>): Double {
+    var sum: Double = 0.0
+    for (num in numbers) {
+        sum += num
+    }
+    var average = sum / numbers.size
+
+    return average
+}
+```
+
+### Parameterized arguments and return
+
+Also called `Generics` and `Parametric polymorphism`
+
+For parameterized types we want to write general functions over writing the same one again and again. Also called parametric polymorphism. We use `<T>` that denotes any generic type.
+
+```kotlin
+fun <T> getFirst(list: List<T>): T {
+    return list[0]
+}
+
+...
+getFirst(listOf(1, 2, 3)) => 1
+getFirst(listOf("Kotlin", "Java", "Scala") => Kotlin
+```
+
+### Lambdas
+
+Lambdas are like functions which can be assigned to variables, passed around functions and returned. It basically has a type `(<list of types>) -><return type>`
+
+```kotlin
+val sum: (Int, Int) -> Int = { x: Int, y: Int -> x + y }
+```
+
+Kotlin is quite smart with type inference so this can also be
+```kotlin
+val sum = {x, y -> x + y}
+```
+
+<!-- TODO: Higher order functions -->
 
 ## Classes and Objects
 
-## Data Classes
+### Data Classes
 
-## Inheritance
+### Inheritance
 
-## Generics
+### Generic classes
 
 ## Null safety
 
