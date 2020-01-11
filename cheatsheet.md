@@ -216,7 +216,9 @@ for (city in cities) {
 Here it's slightly different because we can assign two variables, one for the key and the other for the value. Note the bracket around the variable part since we have more than one. 
 
 ```kotlin
-val studentGrades = mapOf("Alice" to 96.7, "Greg" to 90.1, "Jessica" to 89.7)
+val studentGrades = mapOf("Alice" to 96.7, 
+                          "Greg" to 90.1, 
+                          "Jessica" to 89.7)
 for ( (name, score) in studentGrades) {
     println("$name got $score")
 } 
