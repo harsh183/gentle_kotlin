@@ -3,7 +3,7 @@ layout:  post
 title:  Variables, Values, and Basic Math
 ---
 
-# Introduction to Variables
+## Introduction to Variables
 
 A variable is a way to store data or information in our code, and what we store can be of numerous types.  Let's look at a simple example:
 
@@ -13,9 +13,9 @@ var firstExample: Int = 1
 
 In the first line, we made a variable (denoted as 'var'), gave it the name 'firstExample', and stored the value 1.  Its type is also declared as an Int, short for integer.  So variables have a type, a name, and (usually) a value.
 
-## Variable Naming
+### Variable Naming
 
-### Why it's Important
+#### Why it's Important
 
 ```kotlin
 var x: Double = 1.10
@@ -33,7 +33,7 @@ var totalDue: Double = salesTax * retailPrice
 
 Now the person reading this code can say that the program could have been written for a sales clerk who wants to calculate the paid amount due for every customer.  While this example may be simple, having to decipher, say, 700-1000 lines of code, throughout which all of the variables were named in this manner would be outrageously frustrating!
 
-### namingConventions
+#### namingConventions
 
 There are two main rules to variable naming:  1) Variables are named after what they do, and 2) naming follows the camel case standard, in which the first word in the variable name is lower case and the first letter of every word following is capitalized.
 
@@ -41,7 +41,7 @@ In the example above, we had a variable that stored the sales tax multiplier, so
 
 If you want more details on the camel case rules, check out [Geeks for Geeks](https://www.geeksforgeeks.org/java-naming-conventions/).  There is a lot of information in that particular article that may not be relevant for you yet, but it delves into some good examples with variable naming.
 
-# Values
+## Values
 
 Values are immutable variables, or variables that can't be changed over time.  While normal variables can be changed and reset, values can't be reassigned after initialization.
 
@@ -57,7 +57,7 @@ We want our code to make sense to us, too; while declaring PI as a Kotlin variab
 
 <!--- might add more later -->
 
-# Types of Variables
+## Types of Variables
 
 The official Kotlin site has a great [description](https://kotlinlang.org/docs/reference/basic-types.html) of all the primitive types used in Kotlin; the ones most commonly used are Ints, Doubles, and Booleans, and Strings.
 
@@ -77,7 +77,7 @@ val myName: String = "Bill Gates"
 
 Lastly, the variable 'myName' is a String.  A String in Kotlin is simply text; conventionally, we call a String literal a "string" of text surrounded in quotes.  So, 'myName' is a String that stores the String literal "Bill Gates."
 
-## When Types are Required
+### When Types are Required
 
 ```kotlin
 var thirdExample: Int
@@ -86,7 +86,7 @@ thirdExample = 9
 
 If we don't store a value in a variable when declaring it, the compiler forces us to list an explicit type.  For the variable 'thirdExample', we initialize its value in the next line by giving it a value of 9.
 
-# Math Operators
+## Math Operators
 
 Kotlin supports the standard set of arithmetic operators, such as addition, subtraction, multiplication, and division for any of its **numeric** types (such as Ints, Doubles, Floats, etc.):
 
@@ -107,7 +107,7 @@ Kotlin supports the standard set of arithmetic operators, such as addition, subt
 
 While most of the operators should be familiar to you, the one on line 9 may not! The '%' symbol is called the modulus operator.  The statement a % b returns the remainder of a divided by b.  Hence, the val we declared called 'remainder' stores 0 since the remainder of 12 / 2 is 0.
 
-# Links
+## Links
 
 [Kotlin's Primitive Types](https://kotlinlang.org/docs/reference/basic-types.html)
 

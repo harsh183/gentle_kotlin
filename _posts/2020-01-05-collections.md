@@ -3,23 +3,25 @@ layout: post
 title: Collections
 ---
 
-# What are Collections?
-
 ## Real-World Example
 
 Say we're building an application that takes a picture of food and gives you recipes that use those ingredients.  While this sounds very complex, the first step would be to figure out how to store these food items in our program.  We can do so with something called collections.
 
-A collection is just a container that stores a number of objects.  These objects have to share the same type, so we can't have a collection of Ints, Doubles, and Booleans.  The objects stored in collections are called elements or items.  In our example, we can store a collection of food items represented with String literals! 
+A collection is just a container that stores a number of objects.  These objects have to share the same type, so we can't have a collection of Ints, Doubles, and Booleans.  The objects stored in collections are called elements or items.
 
-How we use this collection depends on what type of collection we construct.  Kotlin provides different kinds of collections that are friendlier to use for different reasons; as such, depending on how you want to store and use objects, you might use a certain type of collection.  Let's delve into the different types.
+How we use this collection depends on what type of collection we construct.  Kotlin provides different kinds of collections that are friendlier to use for different reasons; as such, depending on how you want to store and use objects, you might use a certain type of collection.
 
-## Types of Collections
+## Mutable vs Immutable
 
-### Mutable vs Immutable
+### Immutable
 
-Before we go into the different types, we need to talk about the difference between immutable collections and mutable collections.  We mentioned the concept of immutability when we introduced Kotlin values; in that context, we talked about how values are just variables that can't be changed over time.  The same applies with collections!  Once we construct a collection, meaning we add objects to it at the same time we declare it, we can't modify it anymore.  We call immutable collections as read-only collections, which just means that we can read through, or access, its items, without modifying the collection itself.
+Before we go into the different types, we need to talk about the difference between immutable and mutable collections.  We mentioned the concept of immutability when we introduced Kotlin values; in that context, we talked about how values are just variables that can't be changed over time.  The same applies with collections!  Once we construct a collection, meaning we add objects to it at the same time we declare it, we can't modify it anymore.  We call immutable collections as read-only collections, which just means that we can read through, or access, its items, without modifying the collection itself.
+
+### Mutable
 
 Mutable collections are just the opposite.  We can remove and add things anytime.  Both mutable and immutable collections are useful for different applications, and we'll give some examples we talk about the different types of collections.
+
+## Types of Collections
 
 ### Lists
 
@@ -45,7 +47,7 @@ mutableList[0] = 0 // now the list is 0, 4, 6, 8, 10
 mutableList.removeAt(0) // now the list is 4, 6, 8, 10
 ```
 
-#### Add and Remove
+#### Adding and Removing Elements
 
 From the examples above, you can see that lists have built-in add and remove functions!  `removeAt` takes only one argument:  the index of the element to be removed.  In line 3 of the immutable example, we remove at the 0th index, or the 1st element in the list.  The `add` function takes an element and adds that element to the end of the list by default.  Here's an example:
 
@@ -57,9 +59,42 @@ println(mutableList) // prints [2, 4, 6, 8, 10, 12]
 
 To see more documentation on lists in Kotlin, check out [the official Kotlin site](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html).  It goes more in detail with the add and remove functions, as well as similar built-in functions that come in handy with lists. 
 
-### Sets
+#### Iterating through the Elments
 
+Lists are really useful for storing objects and accessing them through something known as a `foreach` loop.  It's called a loop because the code block we write for it repeats itself for EVERY item in the list.  Let's start with a basic example:
 
+```kotlin
+var numbers = listOf(1, 2, 3, 4, 5)
+for (item in numbers) {
+  print(item.toString() + " ")
+}
+```
+The console prints out the following:
+
+```
+1 2 3 4 5 
+```
+
+Since our for loop only has line of code run for each item in the list, we can actually write the for loop as a single line of code, as opposed to a curly bracket-enclosed block:
+
+```kotlin
+for (item in numbers) print(item.toString() + " ")
+```
+
+We can't modify the items in a `foreach` loop, we can access them and read their attributes.  In this case, we access every item and just print them, but we can make `foreach` loops to do a variety of things with just a bit of conditional logic.  We can also access the index of every element by looping through the indices.  The syntax looks like the following:
+
+```kotlin
+var chars = listOf('a', 'b', 'c', 'd')
+for (i in chars.indices) {
+  print(chars[i] + " ")
+}
+```
+
+When run, the code above prints out the following on the console:
+
+```
+0 1 2 3 
+```
 
 ### Maps
 
@@ -80,9 +115,11 @@ While lists allow us to keep track of objects by numerical indexing, maps give u
 
 ## Lists
 
-
+Unlike maps, lists can contain duplicate entries.  A list functions like a list; we can read from top to bottom using numerical indexing, and add and remove things.  The order doesn't matter unless the list is sorted, so finding a value without knowing its index can mean looking through the entire list.
 
 ## Maps
+
+Maps can't have duplicate keys, which makes values less complicated to find.  With a list, we have to start from either the top or the bottom from the list and work our way through the entire list to find our value.  With maps, if we know the key, we can find the value in one line of code!
 
 # Links
 
