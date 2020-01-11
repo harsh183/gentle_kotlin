@@ -142,6 +142,8 @@ val quickTax = if (income > 500) income * 0.1 else 0
 
 Note as a block `else` is optional but when it's being used as an expression (ex. the `quickTax` assignment above) then `else` has to be there.
 
+<!-- TODO: Ranges, Boolean Expression --> 
+
 ## When  
 
 For when there are more than two branches possible. This has some very powerful syntax better than C-like languages like `switch`
@@ -159,12 +161,72 @@ when (age) {
     else -> print("Invalid age")
 }
 ```
-
+<!-- TODO: Collections -->
+ 
 It works with single values, several values collected, ranges and collections as well as many more complex matchers. 
 
 ## While
 
+```kotlin
+while(<BOOLEAN CONDITION>) {
+    // the loop body will repeat as long as the condition is true
+}
+```
+
 ## For 
+
+For looping over anything that is `Iterable` like ranges, collections etc. 
+```kotlin
+for (<variable name> in <iterable thing>) {
+    // body will run for each with <variable name> changing each time
+}
+```
+
+### Ranges
+
+```kotlin
+for (i in 0..5) print("$i ")
+// => 0 1 2 3 4 5
+for (i in 10 downto 1 step 2) print("$i ")
+// => 10 8 6 4 2 
+```
+
+### Arrays
+
+```kotlin
+val undergrad: Array<Int> = arrayOf(18, 19, 20, 21, 22)
+for (age in undergradAges) {
+    print("$age ")
+}
+// => 18 19 20 21 22
+```
+
+### Lists
+
+```kotlin
+val cities = listOf("Bangalore", "London", "Champaign", "Urbana")
+for (city in cities) {
+    println("$city ")
+}
+=> Bangalore London Champaign Urbana
+```
+
+### Maps
+
+Here it's slightly different because we can assign two variables, one for the key and the other for the value. Note the bracket around the variable part since we have more than one. 
+
+```kotlin
+val studentGrades = mapOf("Alice" to 96.7, "Greg" to 90.1, "Jessica" to 89.7)
+for ( (name, score) in studentGrades) {
+    println("$name got $score")
+} 
+```
+
+```
+Alice got 96.7
+Greg got 90.1
+Jessica got 89.7
+```
 
 ## Functions 
 
