@@ -337,7 +337,7 @@ luckyNumbers.fold(0) {acc, item -> acc + item}
 
 Making one ourselves
 ```kotlin
-fun nestedApply(input: Int, n: Int, (Int) -> Int): Int {
+fun nestedApply(input: Int, n: Int, fn: (Int) -> Int): Int {
     var result: Int = input
     for (i in 1..n) {
         result = fn.invoke(result)
