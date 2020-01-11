@@ -278,6 +278,8 @@ fun main() {
 
 `return` brings the control back to the function that called it.
 
+If you add a type then it gives back that value, like an output.
+
 ```kotlin
 fun average(numbers: List<Double>): Double {
     var sum: Double = 0.0
@@ -306,7 +308,7 @@ getFirst(listOf(1, 2, 3)) => 1
 getFirst(listOf("Kotlin", "Java", "Scala") => Kotlin
 ```
 
-### Lambdas
+## Lambdas
 
 Lambdas are like functions which can be assigned to variables, passed around functions and returned. It basically has a type `(<list of types>) -><return type>`
 
@@ -319,7 +321,35 @@ Kotlin is quite smart with type inference so this can also be
 val sum = {x, y -> x + y}
 ```
 
-<!-- TODO: Higher order functions -->
+### Higher order functions
+
+Lambdas can be used in higher order functions (functions that take in other functions as input)
+
+```kotlin
+val luckyNumbers = listOf(1, 2, 5, 25, 42)
+luckyNumbers.map {it * it } // it is there if there is only one param
+=> [1, 4, 25, 625, 1764]
+luckyNumbers.filter {it % 2 == 0}
+=> [2, 42]
+luckyNumbers.fold(0) {acc, item -> acc + item} 
+=> 75
+```
+
+Making one ourselves
+```kotlin
+fun nestedApply(input: Int, n: Int, (Int) -> Int): Int {
+    var result: Int = input
+    for (i in 1..n) {
+        result = fn.invoke(result)
+    }
+    return result
+}
+...
+nestedApply(10, 2) {it * it} // f(f(x)) where f(x) = x*x
+// => 10000
+nestedApply(10, 5) {it + 1} // f(f(f(f(f(x))))) where f(x) = x + 1
+// => 15
+```
 
 ## Classes and Objects
 
