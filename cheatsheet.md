@@ -398,7 +398,7 @@ val hero3 = Hero("Harsh", "Support", 80)
 println(hero1 == hero3) // => true
 
 // Destructure it
-val (name, type, hp)
+val (name, type, hp) = hero2
 println(name) // => Amirtha
 ```
 
