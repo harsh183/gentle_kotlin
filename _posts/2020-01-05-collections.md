@@ -36,6 +36,8 @@ var emptyStrArr = arrayOf<String>(3)
 // array of empty Strings: ["", "", ""]
 ``` 
 
+One key thing to note about arrays is that their size is fixed at initialization; we can modify the items and access them at any given valid index (0 to `size - 1`), but we can't change the size itself, i.e. add or remove items.  With collections, if we've specified that we can modify them, we can add and remove elements as we please.
+
 ## A Real-World Example of Collections
 
 Say we're building an application that takes a picture of food and gives you recipes that use those ingredients.  While this sounds very complex, the first step would be to figure out how to store these food items in our program.  We can do so with something called collections.
