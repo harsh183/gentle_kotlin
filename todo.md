@@ -13,7 +13,6 @@ Some but not all tasks to do
 * Move away from the forked repo to it's own for nicer history. Do it *someday* for having better git history and linking. 
 * add collections and loops to cheatsheet
 * add arrays to collections
-* fix print syntax
 * start going over higher order and lambdas
 * fix HTTP request gist (NASA api)
 * make more template repossssss
