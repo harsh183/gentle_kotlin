@@ -14,3 +14,5 @@ Some but not all tasks to do
 * add collections and loops to cheatsheet
 * add arrays to collections
 * start going over higher order and lambdas
+* fix HTTP request gist (NASA api)
+* make more template repossssss
