@@ -42,11 +42,11 @@ One key thing to note about arrays is that their size is fixed at initialization
 
 Say we're building an application that takes a picture of food and gives you recipes that use those ingredients.  While this sounds very complex, the first step would be to figure out how to store these food items in our program.  We can do so with something called collections.
 
-A collection is just a container that stores a number of objects.  These objects have to share the same type, so we can't have a collection of Ints, Doubles, and Booleans.  The objects stored in collections are called elements or items.
+A collection is just a container that stores a number of objects.  Collections are similar to arrays, in that the objects they store have to share the same type, so we can't have a collection of Ints, Doubles, and Booleans.  With collections, however, we can change the size of the collection to store more objects (conventionally called elements or items)..
 
 How we use this collection depends on what type of collection we construct.  Kotlin provides different kinds of collections that are friendlier to use for different reasons; as such, depending on how you want to store and use objects, you might use a certain type of collection.
 
-## Mutable vs Immutable
+## Mutable and Immutable Collections
 
 ### Immutable
 
@@ -60,11 +60,9 @@ Mutable collections are just the opposite.  We can remove and add things anytime
 
 ### Lists
 
-Lists are a type of collection that stores items in a specified order and uses indexing to access those items.  In Kotlin, indexing starts at 0, i.e. the first element in a list is at the 0th index, the second element in a list is at the 1st index, and so on.
+Lists are a type of collection that stores items in a specified order and uses indexing to access those item. Remember, indexing is just a way to access an element in a container using numbering; we use 0-based indexing, which means that the 1st element is in the 0th index, the 2nd element is in the 1st index, etc.  At first glance, they might seem really similar to arrays; they use similar operators to access and modify within it, but lists and arrays start to differ when we make a list mutable.
 
 Here's an example of an immutable list:
-
-#### Mutable and Immutable Lists
 
 ```kotlin
 val immutableList = listOf(2, 4, 6, 8, 10)
