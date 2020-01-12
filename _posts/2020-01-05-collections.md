@@ -1,9 +1,42 @@
 ---
 layout: post
-title: Collections
+title: Collections and Arrays
 ---
 
-## Real-World Example
+## Arrays
+
+An array is a container that stores multiple items of the same type; for this reason, Kotlin has primitive type arrays such as IntArray, BooleanArray, etc.  Here's an example of an IntArray:
+
+```kotlin
+var array: IntArray = intArrayOf(1, 2, 3, 4, 5)
+println(array[3]) // prints 4
+array[0] = array[1] + array[2]
+println(array[0]) // prints 5
+println(array.size) // prints 5
+```
+
+We access the items in an array with indexing, a sort of numbering system.  In real life, we use 1-based indexing, meaning that the first item is at index 1.  In programming, however, we use 0-based indexing, so the first element is actually at index 0; similarly, the last element is at index `array.size - 1`.  To access an item in the array, we use the `[]` operator, which takes an Int as the index we want to look at.  In line 2, we printed out the value in the array at index 3, which is actually the 4th value listed in the array in 1-based indexing.
+
+Since this array is a `var`, we can also modify the items at any index, as we did in line 3!  We took the sum of values at array[1] and array[2], which is 5, and passed it into array[0].  So, before that line, we had 1 at the 0th index of the array, but now we've replaced 1 with 5.  The array actually now reads as `[5, 2, 3, 4, 5]`.
+
+We can also initialize an array by giving it a size without assigning values; when we do so, the Kotlin compiler will create an array of the size you gave and fill every spot in that array with the default value of the array's type.  This is better explained with an example:
+
+```kotlin
+val array = IntArray(5)
+// this is an array with values: [0, 0, 0, 0, 0]
+```
+
+Creating a String array is a bit different; even though we use Strings like they're a primitive type, Strings are, in fact, NOT a primitive type.  In the above example we used the `intArrayOf` function to initialize an array of Ints; with Strings, we can use the `arrayOf<String>` function:
+
+```kotlin
+var stringArray = arrayOf<String>("hello", "world", "Kotlin")
+println(stringArray[2]) // prints "Kotlin"
+
+var emptyStrArr = arrayOf<String>(3)
+// array of empty Strings: ["", "", ""]
+``` 
+
+## A Real-World Example of Collections
 
 Say we're building an application that takes a picture of food and gives you recipes that use those ingredients.  While this sounds very complex, the first step would be to figure out how to store these food items in our program.  We can do so with something called collections.
 
