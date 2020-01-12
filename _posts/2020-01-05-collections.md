@@ -66,7 +66,7 @@ Lists are really useful for storing objects and accessing them through something
 ```kotlin
 var numbers = listOf(1, 2, 3, 4, 5)
 for (item in numbers) {
-  print(item.toString() + " ")
+  print("$item ")
 }
 ```
 The console prints out the following:
@@ -78,7 +78,7 @@ The console prints out the following:
 Since our for loop only has line of code run for each item in the list, we can actually write the for loop as a single line of code, as opposed to a curly bracket-enclosed block:
 
 ```kotlin
-for (item in numbers) print(item.toString() + " ")
+for (item in numbers) print("$item ")
 ```
 
 We can't modify the items in a `foreach` loop, we can access them and read their attributes.  In this case, we access every item and just print them, but we can make `foreach` loops to do a variety of things with just a bit of conditional logic.  We can also access the index of every element by looping through the indices.  The syntax looks like the following:
