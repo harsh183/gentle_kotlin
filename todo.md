@@ -12,3 +12,5 @@ Some but not all tasks to do
 * Also put a how to read this tutorial follow along thing. 
 * Move away from the forked repo to it's own for nicer history. Do it *someday* for having better git history and linking. 
 * add collections and loops to cheatsheet
+* add arrays to collections
+* start going over higher order and lambdas
