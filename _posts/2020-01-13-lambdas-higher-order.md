@@ -38,6 +38,7 @@ fun main() {
   val basicSum = { a: Int, b: Int -> a + b }
   println(basicSum(6, 9)) // prints 15
 } 
+```
 
 However, it's always good practice to write out types for readability!
 
