@@ -16,3 +16,5 @@ Some but not all tasks to do
 * start going over higher order and lambdas
 * fix HTTP request gist (NASA api)
 * make more template repossssss
+* Make the index pages have smaller titles and no dividing lines
+
