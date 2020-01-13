@@ -40,11 +40,13 @@ fun main() {
 } 
 ```
 
-However, it's always good practice to write out types for readability!
+However, it's always good practice to write out argument and return types for lambdas so that your code is more readable!
 
 ### Why Lambas
 
+Lambda functions are technically `anonymous functions` since they don't follow typical naming conventions.  They're really convenient because they allow you to write essential code logic without formally declaring them and adding unnecessary lines of code to your project.  They can act as sort of "throw-away functions," meaning that once you're outside of its scope, you never have to look back.
 
+While the syntax is a bit different from typical first-order functions as you've seen up until now, a little bit of practice can lead to feeling more comfortable writing and using them.  They are especially handy in functional programming!
 
 ## Higher-Order Functions
 
