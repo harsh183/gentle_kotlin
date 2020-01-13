@@ -7,7 +7,9 @@ layout: default
 
   {{ content }}
 
-  {% for post in paginator.posts %}
+  <!-- Based off: https://gist.github.com/Phlow/1f27dfafdf2bbcc5c48e -->
+  {% assign sorted = (paginator.posts | sort: 'date') %}
+  {% for post in sorted %}
   <article class="post-body">
     <h2 class="post-title">
       <a href="{{ post.url | relative_url }}">
