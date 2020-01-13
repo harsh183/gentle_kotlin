@@ -310,6 +310,10 @@ getFirst(listOf("Kotlin", "Java", "Scala") => Kotlin
 
 ## Lambdas
 
+```kotlin
+val function_name : Type = { arguments -> code body }
+```
+
 Lambdas are like functions which can be assigned to variables, passed around functions and returned. It basically has a type `(<list of types>) -><return type>`
 
 ```kotlin
