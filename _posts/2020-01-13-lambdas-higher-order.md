@@ -57,3 +57,7 @@ While the syntax is a bit different from typical first-order functions as you've
 ### Why they're useful
 
 ## Links
+
+[Kotlin Lambdas - GeeksForGeeks](https://www.geeksforgeeks.org/kotlin-lambdas-expressions-and-anonymous-functions/)
+[Kotlin Higher-Order Functions - GeeksForGeeks](https://www.geeksforgeeks.org/kotlin-higher-order-functions/)
+[Why Lambdas - StackOverflow](https://stackoverflow.com/questions/16501/what-is-a-lambda-function)
