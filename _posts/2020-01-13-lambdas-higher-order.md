@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lambdas and Inline Functions
+title: Lambdas and Higher Order Functions 
 ---
 
 ## Lambda Functions
@@ -22,7 +22,7 @@ Let's look at `firstLambda`:  it doesn't take any arguments or return anything, 
 
 ```kotlin
 fun main() {
-  val andOperator: (Boolean, Boolean) -> Boolean = { a: Boolean, b: Boolean -> a && b }
+  val andOperator: (Boolean, Boolean) -> Boolean = { a, b -> a && b }
   val first = true
   val second = false
   println(andOperator(first, second)) // prints false
@@ -31,7 +31,7 @@ fun main() {
 
 So lambda functions typically have this format:  `val lambda_name: (Arg Types) -> Return Type = { Args -> code_body }`.
 
-We don't always need to list out types.  The Kotlin compiler assumes types when it's not given types, so we can omit them if they're not necessary.
+We don't always need to list out types.  The Kotlin compiler assumes types when it's not given any explicit ones, so we can omit them if they're not necessary.
 
 ```kotlin
 fun main() {
@@ -42,15 +42,32 @@ fun main() {
 
 However, it's always good practice to write out argument and return types for lambdas so that your code is more readable!
 
+#### The `it` keyword
+
+In Kotlin, we can use `it` as the implicit name of a single parameter in a lambda function.  Let's think about the notion in this way:  if we pass something to a function, what do we want the function to do with `it`?  The `it` keyword also allows us to omit the `->` operator, but this is all better explained with an example:
+
+```kotlin
+fun main() {
+  val v1: (Int) -> Boolean = { x -> x > 0 }
+  val v2: (Int) -> Boolean  = { it > 0 }
+  println(v1(5)) // prints true
+  println(v2(5)) // prints true
+}
+```
+
+As you can see, we didn't explicitly state how many arguments are passed into the lambda `v2`; instead, using `it` allows the Kotlin compiler to assume that only one argument is passed into the function.
+
 ### Why Lambas
 
-Lambda functions are technically `anonymous functions` since they don't follow typical naming conventions.  They're really convenient because they allow you to write essential code logic without formally declaring them and adding unnecessary lines of code to your project.  They can act as sort of "throw-away functions," meaning that once you're outside of its scope, you never have to look back.
+Lambdas are really convenient because they allow you to write essential code logic without formally declaring them and adding unnecessary lines of code to your project.  They can act as sort of "throw-away functions," meaning that once you're outside of its scope, you never have to look back.
 
 While the syntax is a bit different from typical first-order functions as you've seen up until now, a little bit of practice can lead to feeling more comfortable writing and using them.  They are especially handy in functional programming!
 
 ## Higher-Order Functions
 
 ### What are Higher-Order Functions?
+
+
 
 ### Syntax
 
