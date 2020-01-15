@@ -67,9 +67,23 @@ While the syntax is a bit different from typical first-order functions as you've
 
 ### What are Higher-Order Functions?
 
-
+A higher-order function is one that can take a function as an argument and/or return a function.  We can pass in and/or return lambdas by explicitly stating the type.  Let's look at an example.
 
 ### Syntax
+
+```kotlin
+var lambdaFunc: () -> Int = { 0 }
+fun highOrdFunc( lambda: () -> Int ) {
+  lambda()
+}
+
+fun main() {
+  println(highOrdFunc(lambdaFunc))
+} 
+```
+Let's review this code.  The first line defines a lambda function, which we call in the `main` method.  The second function we declared is a higher-order function, and we know this not just because of the obvious naming, but we can see that the function takes in a lambda.  Remember, first-order functions take in only variables.
+
+In the higher-order function we run the lambda.  Then, in the `main` method, we print the output of the higher-order function, which is `0`!
 
 ### Why they're useful
 
