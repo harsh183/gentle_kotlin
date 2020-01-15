@@ -97,10 +97,12 @@ val age: Int = 19
 val eyePower: Double = 0.103
 
 // To print variables
-println("$name is $age years old with power $eyePower")
+println("$name is ${age} years old with power $eyePower")
 ```
 
-Basically use `print()` to display, `println()` to print with a new line and `$<variable name>` inside to print out values
+Basically use `print()` to display, `println()` to print with a new line and `${<variable name>}` inside to print out values.
+
+Most of the time if it's just a single variable name the `{}` are not requried and it's just `$<variable name>`
 
 ## Console input
 
