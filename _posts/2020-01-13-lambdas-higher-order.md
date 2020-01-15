@@ -98,7 +98,9 @@ fun main() {
 
 As you can tell by the example, the `filter` function returns every value in the list that satisfies the boolean condition passed in, and the `map` function returns a new list of the output values from the original list and the code body passed into the function. 
 
-### Why Higher-Order Functionsl
+### Why Higher-Order Functions
+
+Higher-order functions are most popular with functional programming.  They allow for cleaner, crisper code and provide a succint way to utilize functions and work with really big data structures!  With these functions we can abstract our logic even further to be more widely applicable; this is especially important for building large models and structures with code. 
 
 ## Links
 
