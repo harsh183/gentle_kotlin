@@ -370,7 +370,7 @@ class Hero(val name: String, val type: String, var healthPoints: Int) {
 `val` makes it read only, `var` means it will change. To initalize
 
 ```kotlin
-var hero1: Hero = Hero("Harsh Deep", "Support", 100)
+var hero1: Hero = Hero("Harsh Deep", "Mage", 100)
 ```
 
 <!-- TODO: Functions within classes --> 
@@ -388,19 +388,19 @@ data class Hero(val name: String, val type: String, var healthPoints: Int) {
 Lets us do: 
 
 ```kotlin
-val hero1 = Hero("Harsh", "Support", 100)
+val hero1 = Hero("Harsh", "Mage", 100)
 println(hero1) // get a nice print
-// => Hero(name=Harsh, type=Support, healthPoints=100)
+// => Hero(name=Harsh, type=Mage, healthPoints=100)
 println(hero1.healthPoints) // get values
 // => 100
 hero1.healthPoints = 80 // set values (var only)
 println(hero1) 
-// => Hero(name=Harsh, type=Support, healthPoints=80)
+// => Hero(name=Harsh, type=Mage, healthPoints=80)
 
 // Check equality 
-val hero2 = Hero("Amirtha", "Support", 100)
+val hero2 = Hero("Amirtha", "Warrior", 100)
 println(hero1 == hero2) // => false
-val hero3 = Hero("Harsh", "Support", 80)
+val hero3 = Hero("Harsh", "Mage", 80)
 println(hero1 == hero3) // => true
 
 // Destructure it
