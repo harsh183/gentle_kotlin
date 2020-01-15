@@ -72,20 +72,33 @@ A higher-order function is one that can take a function as an argument and/or re
 ### Syntax
 
 ```kotlin
-var lambdaFunc: () -> Int = { 0 }
-fun highOrdFunc( lambda: () -> Int ) {
+var lambdaFunc: () -> Unit = { println("Hello Kotlin") }
+fun highOrdFunc( lambda: () -> Unit ) {
   lambda()
 }
 
 fun main() {
-  println(highOrdFunc(lambdaFunc))
+  highOrdFunc(lambdaFunc)
 } 
 ```
 Let's review this code.  The first line defines a lambda function, which we call in the `main` method.  The second function we declared is a higher-order function, and we know this not just because of the obvious naming, but we can see that the function takes in a lambda.  Remember, first-order functions take in only variables.
 
-In the higher-order function we run the lambda.  Then, in the `main` method, we print the output of the higher-order function, which is `0`!
+In the higher-order function we run the lambda.  Then, in the `main` method, we call `highOrdFunc`, which calls `lambdaFunc`, which prints out "Hello Kotlin!" to the console.
 
-### Why they're useful
+### Built-In Functions
+
+Kotlin provides some really useful higher-order functions, like `map` and `filter`.  These functions allow us to evaluate collections in one single line of code without writing an entire `foreach` loop!  Let's look at an example:
+
+```kotlin
+fun main() {
+  var numList = listOf(1, 2, 3, 4, 5)
+  println(numList.filter { it > 3 } ) // prints [4, 5]
+  println(numList.map { it * 3 } ) // prints [3, 6, 9, 12, 15]
+```
+
+As you can tell by the example, the `filter` function returns every value in the list that satisfies the boolean condition passed in, and the `map` function returns a new list of the output values from the original list and the code body passed into the function. 
+
+### Why Higher-Order Functionsl
 
 ## Links
 
