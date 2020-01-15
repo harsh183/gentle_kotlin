@@ -42,3 +42,5 @@ data class Teacher(val name: String,
 ## Syntax
 
 ## Better code
+
+<!-- TODO: Showing more abstract function calling and such -->
