@@ -349,7 +349,7 @@ Making one ourselves
 fun nestedApply(input: Int, n: Int, fn: (Int) -> Int): Int {
     var result: Int = input
     for (i in 1..n) {
-        result = fn.invoke(result)
+        result = fn(result)
     }
     return result
 }
