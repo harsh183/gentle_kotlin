@@ -71,16 +71,45 @@ A higher-order function is one that can take a function as an argument and/or re
 
 ### Built-In Functions
 
-Kotlin provides some really useful higher-order functions, like `map` and `filter`.  These functions allow us to evaluate collections in one single line of code without writing an entire `foreach` loop!  Let's look at an example:
+Kotlin provides some really useful higher-order functions, like `map` and `filter`.  These functions allow us to evaluate collections in one single line of code without writing an entire `foreach` loop!
+
+#### `filter`
 
 ```kotlin
 fun main() {
   var numList = listOf(1, 2, 3, 4, 5)
   println(numList.filter { it > 3 } ) // prints [4, 5]
+```
+
+The `filter` function returns every value in the list that satisfies the boolean condition passed in.  In this case, `filter` only considers values greater than 3, so it returns a list containing 4 and 5.  `filter` is really useful because it allows us to access every element in a list without any modification, and does so in one line of code.
+
+#### `map`
+
+```kotlin
+fun main() {
+  var numList = listOf(1, 2, 3, 4, 5)
   println(numList.map { it * 3 } ) // prints [3, 6, 9, 12, 15]
 ```
 
-As you can tell by the example, the `filter` function returns every value in the list that satisfies the boolean condition passed in, and the `map` function returns a new list of the output values from the original list and the code body passed into the function.
+`map` returns a list of the output values from the original list based on the code body passed into the lambda.  In our case, we multiplied every value in the list by 3 and built a new list from these new values.  `map`, like filter, is really useful in that it doesn't modify the original list and does what a for loop would do in one line of code.
+
+#### `fold`
+
+```kotlin
+fun main() {
+  val numList = listOf(1, 2, 3, 4, 5)
+  println(numList.fold(10) { max, item -> if (item > max) item else max }) // prints 10
+}
+```
+
+The syntax for `fold` requires a bit more explanation.  It takes a single argument, and in this situation, we use it as a default value.  Typically, `fold` is used as an accumulator; for example, we can take fold, iterate it through a list, and have it accumulate every value into a sum.  In this bit of code, however, we store a current maximum value in it as we iterate through the list.  `fold` compares 10 to the current max in the list and stores whichever value is bigger at every comparison.  Since 10 beats every element in our list, it will return 10 as the default value.  If we want to find the maximum value without using a default, we can call `reduce`.
+
+```kotlin
+fun main() {
+  val numList = listOf(1, 2, 3, 4, 5)
+  println(numList.reduce() { max, item -> if (item > max) item else max }) // prints 10
+}
+```
 
 ### Writing Our Own Functions
 
