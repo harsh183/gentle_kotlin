@@ -127,9 +127,31 @@ Let's review this code.  The first line defines a lambda function, which we call
 
 In the higher-order function we run the lambda.  Then, in the `main` method, we call `highOrdFunc`, which calls `lambdaFunc`, which prints out "Hello Kotlin!" to the console.
 
+Here's an example of a more useful higher-order function that functions as a sort of `map` mimicker.
+
+```kotlin
+fun mapper(size: Int, fn: (Int) -> Int):List<Int> {
+  var x = 1
+  var list = mutableListOf<Int>()
+  while (x <= size) {
+  	list.add(fn(x))
+    x++
+  }
+  
+  return list
+}
+
+fun main() {
+  println(mapper(3) {it * it}) // prints [1, 4, 9]
+  println(mapper(6) {it + 2}) // prints [3, 4, 5, 6, 7, 8]
+} 
+```
+
+It takes in a size for a list and builds a list based on a function that performs a computation for every value from 1 to `size`.
+
 ### Why Higher-Order Functions
 
-Higher-order functions are most popular with functional programming.  They allow for cleaner, crisper code and provide a succint way to utilize functions and work with really big data structures!  With these functions we can abstract our logic even further to be more widely applicable; this is especially important for building large models and structures with code. 
+Higher-order functions are most popular with functional programming.  They allow for cleaner, crisper code and provide a succint way to utilize functions and work with really big data structures!  With these functions we can abstract our logic even further to be more widely applicable; this is especially important for building large models and structures with the code we write. 
 
 ## Links
 
