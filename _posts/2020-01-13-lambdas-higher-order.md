@@ -69,7 +69,20 @@ While the syntax is a bit different from typical first-order functions as you've
 
 A higher-order function is one that can take a function as an argument and/or return a function.  We can pass in and/or return lambdas by explicitly stating the type.  Let's look at an example.
 
-### Syntax
+### Built-In Functions
+
+Kotlin provides some really useful higher-order functions, like `map` and `filter`.  These functions allow us to evaluate collections in one single line of code without writing an entire `foreach` loop!  Let's look at an example:
+
+```kotlin
+fun main() {
+  var numList = listOf(1, 2, 3, 4, 5)
+  println(numList.filter { it > 3 } ) // prints [4, 5]
+  println(numList.map { it * 3 } ) // prints [3, 6, 9, 12, 15]
+```
+
+As you can tell by the example, the `filter` function returns every value in the list that satisfies the boolean condition passed in, and the `map` function returns a new list of the output values from the original list and the code body passed into the function.
+
+### Writing Our Own Functions
 
 ```kotlin
 var lambdaFunc: () -> Unit = { println("Hello Kotlin") }
@@ -84,19 +97,6 @@ fun main() {
 Let's review this code.  The first line defines a lambda function, which we call in the `main` method.  The second function we declared is a higher-order function, and we know this not just because of the obvious naming, but we can see that the function takes in a lambda.  Remember, first-order functions take in only variables.
 
 In the higher-order function we run the lambda.  Then, in the `main` method, we call `highOrdFunc`, which calls `lambdaFunc`, which prints out "Hello Kotlin!" to the console.
-
-### Built-In Functions
-
-Kotlin provides some really useful higher-order functions, like `map` and `filter`.  These functions allow us to evaluate collections in one single line of code without writing an entire `foreach` loop!  Let's look at an example:
-
-```kotlin
-fun main() {
-  var numList = listOf(1, 2, 3, 4, 5)
-  println(numList.filter { it > 3 } ) // prints [4, 5]
-  println(numList.map { it * 3 } ) // prints [3, 6, 9, 12, 15]
-```
-
-As you can tell by the example, the `filter` function returns every value in the list that satisfies the boolean condition passed in, and the `map` function returns a new list of the output values from the original list and the code body passed into the function. 
 
 ### Why Higher-Order Functions
 
