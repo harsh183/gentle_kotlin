@@ -61,13 +61,13 @@ As you can see, we didn't explicitly state how many arguments are passed into th
 
 Lambdas are really convenient because they allow you to write essential code logic without formally declaring them and adding unnecessary lines of code to your project.  They can act as sort of "throw-away functions," meaning that once you're outside of its scope, you never have to look back.
 
-While the syntax is a bit different from typical first-order functions as you've seen up until now, a little bit of practice can lead to feeling more comfortable writing and using them.  They are especially handy in functional programming!
+While the syntax is a bit different from typical first-class functions as you've seen up until now, a little bit of practice can lead to feeling more comfortable writing and using them.  They are especially handy in functional programming!
 
 ## Higher-Order Functions
 
 ### What are Higher-Order Functions?
 
-A higher-order function is one that can take a function as an argument and/or return a function.  We can pass in and/or return lambdas by explicitly stating the type.  Let's look at an example.
+A higher-order function is one that can take a function as an argument and/or return a function.  We can pass in and/or return lambdas, as well as other Kotlin `first-class` functions by explicitly stating the type.  Let's look at an example.
 
 ### Built-In Functions
 
