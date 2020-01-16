@@ -28,7 +28,7 @@ var isSorted: Boolean = false;
 var temperature = 24.32 // If you don't mention one it guesses
 ```
 
-These are when you want to store data that you will expect changes more than *once*. Most if the time this does not happen so we use  *values*
+These are when you want to store data that you will expect changes more than *once*. 
 
 ## Values
 
@@ -44,6 +44,8 @@ val area = PI * radius // the guesses are fairly smart
 ```
 
 When you want to store something that will not change more than once. If it does use `var`.
+
+Generally you'd want to use `val` as much as possible over `var`.
 
 ## Types
 
@@ -96,7 +98,6 @@ val name: String = "Harsh"
 val age: Int = 19
 val eyePower: Double = 0.103
 
-// To print variables
 println("$name is ${age} years old with power $eyePower")
 ```
 
@@ -119,14 +120,6 @@ val simple = readLine()
 
 ## If
 
-```
-if (<boolean condition>) {
-    <code for when things are true>
-} else { // optional 
-    <code for when things are false>
-}
-```
-
 ```kotlin
 val tax: Int = 0
 val income = 1000
@@ -134,7 +127,7 @@ val income = 1000
 if (income > 500) {
     tax = income * 0.1
     println("10% tax")
-} else {
+} else { // optional
     println("No tax")
 }
 
@@ -167,12 +160,21 @@ when (age) {
  
 It works with single values, several values collected, ranges and collections as well as many more complex matchers. 
 
+## Repeat
+
+```kotlin
+repeat(3) { print("Loop $it") }
+```
+
 ## While
 
 ```kotlin
-while(<BOOLEAN CONDITION>) {
-    // the loop body will repeat as long as the condition is true
+var x = 0
+while(x < 5) {
+    print("$x ")
+    x++
 }
+// => 0 1 2 3 4 
 ```
 
 ## For 
