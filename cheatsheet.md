@@ -164,6 +164,7 @@ It works with single values, several values collected, ranges and collections as
 
 ```kotlin
 repeat(3) { print("Loop $it") }
+// => Loop 0 Loop 1 Loop 2
 ```
 
 ## While
