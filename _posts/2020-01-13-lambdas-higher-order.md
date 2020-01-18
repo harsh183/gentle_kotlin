@@ -7,18 +7,18 @@ title: Lambdas and Higher Order Functions
 
 ### What are Lambda Functions?
 
-Lambdas are an interesting way to write and declare functions; we've seen them written formally up to this point, involving the `fun` keyword and explicit types.  Lambda functions are functions that aren't declared but passed immediately as an expression.
+Lambdas are an interesting way to write and declare functions; we've seen functions written formally up to this point, involving the `fun` keyword and explicit types.  Lambda functions are functions that aren't declared but passed immediately as an expression.
 
 ### Syntax
 
 ```kotlin
 fun main() {
   val firstLambda = { println("This is a lambda expression!") }
-  firstLambda() // prints out "This is a lambda expression!")
+  firstLambda() // prints out "This is a lambda expression!"
 }
 ```
 
-Let's look at `firstLambda`:  it doesn't take any arguments or return anything, so it's equivalent to a void function.  What happens when we want to write something that takes arguments or returns them?  Here's how:
+Let's look at `firstLambda`. It doesn't take any arguments or return anything, and runs a single print statement.  What happens when we want to write something that takes arguments or returns them?  Here's how:
 
 ```kotlin
 fun main() {
