@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cheetsheet/Reference
+title: Cheetsheet
 sidebar_link: true
 ---
 
@@ -25,10 +25,12 @@ var <name_of_variable>: <Type> = <value>
 var x: Int = 25
 var displayNext: String = "Hello World"
 var isSorted: Boolean = false;
-var temperature = 24.32 // If you don't mention one it guesses
+var temperature = 24.32 // If you don't mention a type Kotlin can infer it
 ```
 
 These are when you want to store data that you will expect changes more than *once*. 
+
+Type inference is fairly smart so almost all the time you can not mention the type and it will figure it out so put it in place where it matters. 
 
 ## Values
 
@@ -98,10 +100,11 @@ val name: String = "Harsh"
 val age: Int = 19
 val eyePower: Double = 0.103
 
+// String interpolation
 println("$name is ${age} years old with power $eyePower")
 ```
 
-Basically use `print()` to display, `println()` to print with a new line and `${<variable name>}` inside to print out values.
+Basically use `print()` to display, `println()` to print with a new line and string interpolation like`${<variable name>}` inside to print out values.
 
 Most of the time if it's just a single variable name the `{}` are not requried and it's just `$<variable name>`
 
