@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cheetsheet/Reference
+title: Cheetsheet
 sidebar_link: true
 ---
 
@@ -25,10 +25,12 @@ var <name_of_variable>: <Type> = <value>
 var x: Int = 25
 var displayNext: String = "Hello World"
 var isSorted: Boolean = false;
-var temperature = 24.32 // If you don't mention one it guesses
+var temperature = 24.32 // If you don't mention a type Kotlin can infer it
 ```
 
-These are when you want to store data that you will expect changes more than *once*. Most if the time this does not happen so we use  *values*
+These are when you want to store data that you will expect changes more than *once*. 
+
+Type inference is fairly smart so almost all the time you can not mention the type and it will figure it out so put it in place where it matters. 
 
 ## Values
 
@@ -44,6 +46,8 @@ val area = PI * radius // the guesses are fairly smart
 ```
 
 When you want to store something that will not change more than once. If it does use `var`.
+
+Generally you'd want to use `val` as much as possible over `var`.
 
 ## Types
 
@@ -96,11 +100,11 @@ val name: String = "Harsh"
 val age: Int = 19
 val eyePower: Double = 0.103
 
-// To print variables
+// String interpolation
 println("$name is ${age} years old with power $eyePower")
 ```
 
-Basically use `print()` to display, `println()` to print with a new line and `${<variable name>}` inside to print out values.
+Basically use `print()` to display, `println()` to print with a new line and string interpolation like`${<variable name>}` inside to print out values.
 
 Most of the time if it's just a single variable name the `{}` are not requried and it's just `$<variable name>`
 
@@ -119,14 +123,6 @@ val simple = readLine()
 
 ## If
 
-```
-if (<boolean condition>) {
-    <code for when things are true>
-} else { // optional 
-    <code for when things are false>
-}
-```
-
 ```kotlin
 val tax: Int = 0
 val income = 1000
@@ -134,7 +130,7 @@ val income = 1000
 if (income > 500) {
     tax = income * 0.1
     println("10% tax")
-} else {
+} else { // optional
     println("No tax")
 }
 
@@ -167,12 +163,22 @@ when (age) {
  
 It works with single values, several values collected, ranges and collections as well as many more complex matchers. 
 
+## Repeat
+
+```kotlin
+repeat(3) { print("Loop $it") }
+// => Loop 0 Loop 1 Loop 2
+```
+
 ## While
 
 ```kotlin
-while(<BOOLEAN CONDITION>) {
-    // the loop body will repeat as long as the condition is true
+var x = 0
+while(x < 5) {
+    print("$x ")
+    x++
 }
+// => 0 1 2 3 4 
 ```
 
 ## For 
@@ -346,7 +352,7 @@ Making one ourselves
 fun nestedApply(input: Int, n: Int, fn: (Int) -> Int): Int {
     var result: Int = input
     for (i in 1..n) {
-        result = fn.invoke(result)
+        result = fn(result)
     }
     return result
 }
