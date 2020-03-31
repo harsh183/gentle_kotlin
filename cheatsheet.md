@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cheetsheet
+title: Cheatsheet
 sidebar_link: true
 ---
 
