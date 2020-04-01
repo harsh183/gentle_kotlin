@@ -6,7 +6,7 @@ Some but not all tasks to do
 * SASS is end of life - todo
 * figure out how to make the posts seem less dry
 * SEO the site someday idkk so much effort lol 
-* Make the comment section work nicely. 
+* Make the comment section work.
 * For IO lesson run all programs and show their output
 * Also put a how to read this tutorial follow along thing. 
 * add collections and loops to cheatsheet
@@ -18,3 +18,4 @@ Some but not all tasks to do
 * Add some more text in the index page, looks drab as well, maybe merge the welcome page with it. 
 * Create categories for coroutines, android etc. 
 * Add link to joyful kotlin playground (and hopefully geoff still keeps it up and running haha)
+* Cleanup comments and finish expanding on lesson stubs.
