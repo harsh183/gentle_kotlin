@@ -17,3 +17,4 @@ Some but not all tasks to do
 * git history has all old contribs from template repo, do something about that
 * Add some more text in the index page, looks drab as well, maybe merge the welcome page with it. 
 * Create categories for coroutines, android etc. 
+* Add link to joyful kotlin playground (and hopefully geoff still keeps it up and running haha)
