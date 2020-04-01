@@ -414,12 +414,29 @@ val (name, type, hp) = hero2
 println(name) // => Amirtha
 ```
 
-### Inheritance
+<!-- ### Inheritance -->
 
-### Generic classes
+<!-- ### Generic classes -->
 
-## Null safety
+<!-- ## Null safety -->
 
-## Basic testing
+<!-- ## Basic testing -->
 
 ## Coroutines
+
+```kotlin
+import kotlinx.coroutines.*
+
+fun main() = runBlocking {
+  val first =  async { getUser(1) }
+  val second = async { getUser(2) }
+  println("Hello ${first.await()}")   // Hello Amirtha
+  println("Hello ${second.await()}")  // Hello Astha
+}
+
+suspend fun getUser(id: Int): String? {
+  val users = listOf("Harsh", "Amirtha", "Astha")
+  delay(200) // simulated load time
+  return users.elementAtOrNull(id);
+}
+```
