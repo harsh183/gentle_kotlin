@@ -428,10 +428,10 @@ println(name) // => Amirtha
 import kotlinx.coroutines.*
 
 fun main() = runBlocking {
-  val first =  async { getUser(1) }
-  val second = async { getUser(2) }
-  println("Hello ${first.await()}")   // Hello Amirtha
-  println("Hello ${second.await()}")  // Hello Astha
+  val deferredFirst =  async { getUser(1) }
+  val deferredSecond = async { getUser(2) }
+  println("Hello ${deferredFirst.await()}")   // Hello Amirtha
+  println("Hello ${deferredSecond.await()}")  // Hello Astha
 }
 
 suspend fun getUser(id: Int): String? {
