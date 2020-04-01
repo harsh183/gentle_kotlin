@@ -10,7 +10,9 @@ If you've heard of threads before coroutines are a much more lightweight version
 
 <!-- ## Concurrency vs Parallelism. Important distinction -->
 
-This is often quite intimidating, and other programming languages often have very weird and complex syntax to perform this kind of programming. Lots of it feels quite out of reach for beginners. Luckily for us Kotlin actually makes things quite nice for us and this is one of the strongest strengths of the language.
+This is often quite intimidating, and other programming languages often have very weird and complex syntax to perform this kind of programming. Lots of it feels quite out of reach for beginners. Luckily for us Kotlin actually makes things quite nice for us and this is one of the strongest strengths of the language. 
+
+Many languages require you to change quite a few things in your code to make it work asynchronously, but Kotlin tries to keep the code as unchanged as possible except a few word changes here or there.
 
 Let's take a normal looking program and see how to quickly convert to an asynchronous coroutine based program. Load two users and print out their details.
 
