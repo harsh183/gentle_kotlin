@@ -15,3 +15,5 @@ Some but not all tasks to do
 * make more template repossssss
 * Make the index pages have smaller titles and no dividing lines
 * git history has all old contribs from template repo, do something about that
+* Add some more text in the index page, looks drab as well, maybe merge the welcome page with it. 
+* Create categories for coroutines, android etc. 
