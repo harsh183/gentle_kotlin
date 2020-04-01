@@ -19,3 +19,5 @@ Some but not all tasks to do
 * Create categories for coroutines, android etc. 
 * Add link to joyful kotlin playground (and hopefully geoff still keeps it up and running haha)
 * Cleanup comments and finish expanding on lesson stubs.
+* Add sheep illustrations
+* Add favicon
