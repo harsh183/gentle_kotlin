@@ -7,15 +7,16 @@ layout: default
 
   {{ content }}
 
+  <ol>
   <!-- Based off: https://gist.github.com/Phlow/1f27dfafdf2bbcc5c48e -->
   {% assign sorted = (paginator.posts | sort: 'date') %}
   {% for post in sorted %}
-  <article class="post-body">
-    <h2 class="post-title">
+  <!-- <article class="post-body"> -->
+    <li>
       <a href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
-    </h2>
+    </li>
 <!-- 
     {% include post-meta.html post=post %}
 
@@ -39,8 +40,9 @@ layout: default
       {% endif %}
     {% endif %}
 -->
-  </article>
+    <!-- </article> -->
   {% endfor %}
+  </ol>
 
   {% include pagination-older.html %}
 </div>
