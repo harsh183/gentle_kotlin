@@ -6,7 +6,7 @@ category: Coroutines
 
 One of Kotlin's biggest strengths is a very easy and neat way to write programs that can make use of concurrency using `coroutines`. This allows for a way of running different pieces of code at once and avoid wasting time waiting during programs. 
 
-If you've heard of threads before coroutines are a much more lightweight version of that where hundreds of thousands of coroutines can run for each thread. Similar to the what is used by the programming language Go, this is based off the `CSP` model.
+If you've heard of threads before coroutines are a much more lightweight version of that where hundreds of thousands of coroutines can run for each thread. Similar to the programming language Go with it's `goroutines` this is also based off the `CSP` model. 
 
 <!-- ## Concurrency vs Parallelism. Important distinction -->
 
@@ -60,7 +60,7 @@ import kotlinx.coroutines.*
 
 which imports everything coroutine related. In practice you may want to be more precise with imports but for learning coroutines it's good enough.
 
-### The suspend keyboard
+### The suspend keyword
 
 To make a function work with coroutines all we need to do is add the `suspend` keyword right in front of it. So `suspend` before `getUser()` now made it a suspendable function.
 
