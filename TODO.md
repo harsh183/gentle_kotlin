@@ -21,3 +21,5 @@ Some but not all tasks to do
 * Cleanup comments and finish expanding on lesson stubs.
 * Add sheep illustrations
 * Add favicon
+* Image compression? 
+* Make some of these into github issues?
