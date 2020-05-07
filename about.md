@@ -24,6 +24,6 @@ This is a community led project so feel free to contribute, fix typos, or anythi
 
 ## Tech stuff
 
-The site source is on [Github](https://github.com/harsh183/gentle_kotlin) running on [jekyll](https://jekyllrb.com/) and hosted by [Netlify](https://www.netlify.com/). 
+The site source is on [Github](https://github.com/harsh183/gentle_kotlin) running on [jekyll](https://jekyllrb.com/) and hosted by [Netlify](https://www.netlify.com/). The Kotlin runnable playground is supported by the [official Kotlin playground](https://play.kotlinlang.org/), with embedding pulled from their playground source on [GitHub](https://github.com/JetBrains/kotlin-playground).
 
 [Kotlin](https://kotlinlang.org/) is developed by [JetBrains](https://www.jetbrains.com/) who also developed [IntelliJ](https://www.jetbrains.com/idea/), [Kotlin Playgrond](https://play.kotlinlang.org)
