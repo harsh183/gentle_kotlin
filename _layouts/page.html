@@ -3,6 +3,9 @@ layout: default
 ---
 
 <header>
+  {% if page.title  == "About" %}
+  <img src="/assets/img/about.png">
+  {% endif %}
   <h1 class="page-title">{{ page.title }}</h1>
 </header>
 <div class="content">
