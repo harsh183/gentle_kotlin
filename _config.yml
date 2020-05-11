@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         kramdown
-highlighter:      roug
+highlighter:      rouge
 
 # Setup
 title:            Gentle Kotlin
@@ -13,46 +13,46 @@ url:              https://gentlekotlin.com
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
 
-assets:
-  source_maps: true
-  destination: "/assets"
-  compression: false
-  gzip: false
-  defaults:
-    integrity:
-      {css,img,js}: false
-  caching:
-    enabled: true
-    path: ".jekyll-cache/assets"
-    type: file
-  # --
-  # Assets you wish to always have compiled.
-  #   This can also be combined with raw_precompile which
-  #   copies assets without running through the pipeline
-  #   making them ultra fast.
-  # --
-  precompile: []
-  raw_precompile: [
-    #
-  ]
-  # --
-  # baseurl: whether or not to append site.baseurl
-  # destination: the folder you store them in on the CDN.
-  # url: the CDN url (fqdn, or w/ identifier).
-  # --
-  cdn:
-    baseurl: false
-    destination: false
-    url: null
-  # --
-  # See lib/jekyll/assets/config.rb
-  #   for a list of defaults
-  # --
-  sources:
-    - _assets/custom
-  plugins:
-    css: { autoprefixer: {}}
-    img: { optim: {}}
+# assets:
+#   source_maps: true
+#   destination: "/assets"
+#   compression: false
+#   gzip: false
+#   defaults:
+#     integrity:
+#       {css,img,js}: false
+#   caching:
+#     enabled: true
+#     path: ".jekyll-cache/assets"
+#     type: file
+#   # --
+#   # Assets you wish to always have compiled.
+#   #   This can also be combined with raw_precompile which
+#   #   copies assets without running through the pipeline
+#   #   making them ultra fast.
+#   # --
+#   precompile: []
+#   raw_precompile: [
+#     #
+#   ]
+#   # --
+#   # baseurl: whether or not to append site.baseurl
+#   # destination: the folder you store them in on the CDN.
+#   # url: the CDN url (fqdn, or w/ identifier).
+#   # --
+#   cdn:
+#     baseurl: false
+#     destination: false
+#     url: null
+#   # --
+#   # See lib/jekyll/assets/config.rb
+#   #   for a list of defaults
+#   # --
+#   sources:
+#     - _assets/custom
+#   plugins:
+#     css: { autoprefixer: {}}
+#     img: { optim: {}}
 
 disqus: 
   shortname: gentlekotlin.disqus.com
