@@ -12,6 +12,7 @@ layout: default
   {% assign sorted = (paginator.posts | sort: 'date') %}
   {% for post in sorted %}
     <li>
+      
       <a href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
