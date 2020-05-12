@@ -9,8 +9,6 @@ fun main() {
 }
 ```
 
-![Wholesome looking sheep](/_sheepshots/welcome-to-kotlin-top.png)
-
 Kotlin is a programming language that is both general purpose and fun. It is a great language to learn for those who are newer and just getting into programming as well as the more experienced.
 
 ### A better Java
