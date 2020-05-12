@@ -1,0 +1,48 @@
+.cm-s-default  { font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;}
+.cm-s-default.CodeMirror { background: #f9f9f9; color: #A9B7C6; }
+
+.cm-s-default span.cm-meta { color: #BBB529; }
+.cm-s-default span.cm-number { color: #6897BB; }
+.cm-s-default span.cm-keyword { color: #069; line-height: 1em; font-weight: bold; }
+.cm-s-default span.cm-def { color: #c0f; font-style: italic; }
+.cm-s-default span.cm-variable { color: #033; }
+.cm-s-default span.cm-variable-2 { color: #033; }
+.cm-s-default span.cm-variable-3 { color: #9876AA; }
+.cm-s-default span.cm-type { color: #AABBCC; font-weight: bold; }
+.cm-s-default span.cm-property { color: #FFC66D; }
+.cm-s-default span.cm-operator { color: #555; }
+.cm-s-default span.cm-string { color: #d44950; }
+.cm-s-default span.cm-string-2 { color: #d44950; }
+.cm-s-default span.cm-comment { color: #999999; font-style: italic; } /**/
+.cm-s-default span.cm-link { color: #CC7832; }
+.cm-s-default span.cm-atom { color: #CC7832; }
+.cm-s-default span.cm-error { color: #a61717; background-color: #e3d2d2;}
+.cm-s-default span.cm-tag { color: #629755; font-weight: bold; font-style: italic; text-decoration: underline; }
+.cm-s-default span.cm-attribute { color: #4f9fcf; }
+.cm-s-default span.cm-qualifier { color: #6A8759; }
+.cm-s-default span.cm-bracket { color: #A9B7C6; }
+.cm-s-default span.cm-builtin { color: #FF9E59; }
+.cm-s-default span.cm-special { color: #FF9E59; }
+.cm-s-default span.cm-matchhighlight { color: #FFFFFF; background-color: rgba(50, 89, 48, .7); font-weight: normal;}
+.cm-s-default span.cm-searching { color: #FFFFFF; background-color: rgba(61, 115, 59, .7); font-weight: normal;}
+
+.cm-s-default .CodeMirror-cursor { border-left: 1px solid #A9B7C6; }
+.cm-s-default .CodeMirror-activeline-background { background: #323232; }
+.cm-s-default .CodeMirror-gutters { background: #f9f9f9; border-right: 1px solid #f9f9f9; }
+.cm-s-default .CodeMirror-guttermarker { color: #FFEE80; }
+.cm-s-default .CodeMirror-guttermarker-subtle { color: #D0D0D0; }
+.cm-s-default .CodeMirrir-linenumber { color: #606366; }
+.cm-s-default .CodeMirror-matchingbracket { background-color: #3B514D; color: #FFEF28 !important; font-weight: bold; }
+
+.cm-s-default div.CodeMirror-selected { background: #214283; }
+
+.CodeMirror-hints.native {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  color: #9C9E9E;
+  background-color: #f9f9f9 !important;
+}
+
+.CodeMirror-hints.native .CodeMirror-hint-active {
+  background-color: #f9f9f9 !important;
+  color: #9C9E9E !important;
+}

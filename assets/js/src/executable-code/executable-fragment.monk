@@ -1,0 +1,52 @@
+{% import Exception from './exception' %}
+
+<div class="executable-fragment-wrapper">
+    <div class="executable-fragment {{ theme }}">
+      {% if (!highlightOnly) %}
+        <div class="run-button {{ waitingForOutput ? '_disabled' : ''}}" :onclick={{ this.execute.bind(this) }}></div>
+      {% endif %}
+        <div class="code-area {{ folded ? '_folded' : '_unfolded' }}">
+            {% if (isShouldBeFolded) %}
+                <div class="fold-button {{ foldButtonHover ? '_hover' : '' }} {{ theme }}"
+                    :onmouseenter={{ this.onFoldButtonMouseEnter.bind(this) }}
+                    :onmouseleave={{ this.onFoldButtonMouseLeave.bind(this) }}>
+                </div>
+            {% endif %}
+            <textarea></textarea>
+        </div>
+        <div class="js-code-output-executor {{ theme }}">
+          {% if (openConsole) %}
+            <div class="console-close {{ theme }}" :onclick={{ this.onConsoleCloseButtonEnter.bind(this) }}></div>
+          {% endif %}
+          {% if (waitingForOutput) %}
+              <div class="output-wrapper {{ theme }}">
+                <div class="loader {{ theme }}"></div>
+              </div>
+          {% else %}
+              {% if (output && output != "") || exception %}
+                  <div class="output-wrapper {{ theme }}">
+                      <div class="code-output">
+                          {% unsafe output %}
+
+                          {% if exception %}
+                              <Exception
+                                {{...exception}}
+                                originalException={{ true }}
+                                onExceptionClick={{ this.onExceptionClick.bind(this) }}
+                              />
+                          {% endif %}
+                      </div>
+                  </div>
+              {% endif %}
+          {% endif %}
+        </div>
+    </div>
+
+    {% if (!highlightOnly) %}
+        <div class="compiler-info">
+            <span>Target platform: {{ targetPlatform.printableName }}</span>
+            <span>Running on kotlin v. {{ compilerVersion }}</span>
+        </div>
+    {% endif %}
+
+</div>

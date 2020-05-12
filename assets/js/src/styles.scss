@@ -1,0 +1,431 @@
+@import "~codemirror/lib/codemirror.css";
+@import "rouge-native.css";
+// @import "~codemirror/addon/scroll/simplescrollbars.css";
+
+
+/**
+ WebTeam UI colors
+ */
+$wt-color-tomato: #ec5424;
+$wt-color-seaweed: #4dbb5f;
+$wt-color-silver: #afb1b3;
+$wt-color-dove: #696969;
+$wt-color-code: #3c3f43;
+$warning-color: rgb(254, 255, 222);
+$wt-color-athens: #eaeaec;
+$wt-color-azure: #167dff;
+
+.executable-fragment-wrapper {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.executable-fragment {
+  border: 1px solid #f9f9f9;
+  border-bottom-width: 0;
+}
+
+.hidden-dependency {
+  display: none;
+}
+
+.CodeMirror {
+  height: auto;
+  font-size: 85%;
+
+  pre {
+    line-height: 16.8px;
+    margin-bottom: 0 !important;
+  }
+
+  .CodeMirror-overlayscroll-horizontal div, .CodeMirror-overlayscroll-vertical div {
+    display: none;
+  }
+
+  &:hover {
+    .CodeMirror-overlayscroll-horizontal div, .CodeMirror-overlayscroll-vertical div {
+      display: block;
+      background: #f9f9f9;
+    }
+  }
+}
+
+.CodeMirror-lines {
+  padding: 0;
+  margin: 12px 0;
+}
+
+.CodeMirror-gutter {
+  height: auto;
+}
+
+.CodeMirror {
+  line-height: 1.4;
+  font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
+  font-size: 85%;
+}
+
+.CodeMirror-linenumber {
+  min-width: 0;
+  text-align: center;
+}
+
+.CodeMirror-linebackground.unmodifiable-line {
+  background-color: #f9f9f9;
+}
+
+.CodeMirror-linebackground.unmodifiable-line-dark {
+  background-color: #f9f9f9;
+}
+
+.markPlaceholder {
+  border-top: 1px solid #f9f9f9;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.markPlaceholder-start {
+  border-left: 1px solid #f9f9f9;
+}
+
+.markPlaceholder-end {
+  border-right: 1px solid #f9f9f9;
+}
+
+.run-button {
+  position: absolute;
+  z-index: 10;
+  right: 5px;
+  top: 5px;
+  height: 20px;
+  width: 16px;
+  cursor: pointer;
+  background-size: cover;
+  background: url("img/run.svg") no-repeat;
+
+  &._disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.loader {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+  border-radius: 50%;
+  text-indent: -9999em;
+  color: #f9f9f9;
+  font-size: 8px;
+  opacity: .7;
+  animation: loader 1s infinite ease-in-out;
+  animation-delay: 0.16s;
+}
+
+.loader::before {
+  left: -3.5em;
+  animation-delay: 0s;
+  position: absolute;
+  width: 15px;
+  border-radius: 50%;
+  height: 15px;
+  content: '';
+  animation: loader 1s infinite ease-in-out;
+}
+
+.loader::after {
+  left: 3.5em;
+  animation-delay: 0.32s;
+  position: absolute;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  content: '';
+  animation: loader 1s infinite ease-in-out;
+}
+
+@keyframes loader {
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  80% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  0% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+.cm__ERROR {
+  color: #f00 !important;
+}
+
+.errors-and-warnings-gutter {
+  width: 16px;
+}
+
+.ERRORgutter {
+  height: 13px;
+  width: 13px;
+  margin-top: 2px;
+  margin-left: 2px;
+  background: url("https://try.kotlinlang.org/static/images/icons_all_sprite.svg") no-repeat -150px -500px;
+}
+
+.WARNINGgutter {
+  height: 13px;
+  width: 13px;
+  margin-top: 2px;
+  margin-left: 2px;
+  background: url("https://try.kotlinlang.org/static/images/icons_all_sprite.svg") no-repeat -150px -600px;
+}
+
+.cm__red_wavy_line {
+  background: url("https://try.kotlinlang.org/static/images/wavyline-red.gif") repeat-x 100% 100%;
+  padding-bottom: 2px;
+}
+
+.cm__green_wavy_line {
+  background: url("https://try.kotlinlang.org/static/images/wavyline-green.gif") repeat-x 100% 100%;
+  padding-bottom: 2px;
+}
+
+.js-code-output-executor {
+  border-top: 1px solid $wt-color-athens;
+  position: relative;
+}
+
+.output-wrapper {
+  flex-direction: column;
+  display: flex;
+  border-bottom: 1px solid #f9f9f9;
+  min-height: 60px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.code-output {
+  flex-grow: 1;
+  font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
+  overflow: auto;
+  padding-left: 10px;
+  padding-top: 15px;
+}
+
+.error-output {
+  white-space: pre-wrap;
+  color: #bf616a;
+  min-height: 1.4em;
+  margin: 0;
+  vertical-align: top;
+}
+
+.standard-output {
+  white-space: pre;
+  color: #000;
+  min-height: 1.4em;
+  margin: 0;
+  vertical-align: top;
+}
+
+.test-passed {
+  white-space: pre;
+  color: #bf616a;
+  min-height: 1.4em;
+  vertical-align: top;
+}
+
+.console-close {
+  position: absolute;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: $wt-color-silver url('img/close-console-icon.svg') no-repeat;
+}
+
+.console-close:hover {
+  background-color: $wt-color-dove;
+}
+
+.test-fail, .test-error {
+  color: #bf616a;
+  min-height: 1.4em;
+  vertical-align: top;
+}
+
+.console-block {
+  display: flex;
+}
+
+.console-icon {
+  margin-top: 2px;
+  padding-right: 20px;
+  width: 15px;
+  height: 15px;
+}
+
+.console-icon.attention {
+  background: url('img/attention.svg') no-repeat;
+}
+
+.console-icon.passed {
+  background: url('img/ok.svg') no-repeat;
+}
+
+.console-icon.fail {
+  background: url('img/fail.svg') no-repeat;
+}
+
+.console-icon.error {
+  background: url('img/fail.svg') no-repeat;
+}
+
+.test-time {
+  float: right;
+  font-size: 10px;
+  color: #bf616a;
+  margin-right: 20px;
+  margin-top: -14px;
+}
+
+.stacktrace-element {
+  margin-left: 20px;
+
+  .stacktrace-link {
+    color: #bf616a;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.CodeMirror-foldgutter {
+  position: absolute;
+  width: 100%;
+}
+
+.CodeMirror-foldgutter-folded {
+  width: 100%;
+  background: #f9f9f9;
+}
+
+.fold-button {
+  position: absolute;
+  height: 19px;
+  width: 31px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+  background: transparent url('img/button_open.svg?fill=%23d4d4d4&selector=.data-fill') no-repeat;
+  &._hover {
+    background-image: url('img/button_open.svg?fill=%23f68322&selector=.data-fill');
+  }
+}
+
+._unfolded {
+  .fold-button {
+    background-image: url('img/button_close.svg?fill=%23d4d4d4&selector=.data-fill');
+    &._hover {
+      background-image: url('img/button_close.svg?fill=%23f68322&selector=.data-fill');
+    }
+  }
+}
+
+.code-area {
+  position: relative;
+}
+
+.compiler-info {
+  position: absolute;
+  right: 0;
+  font-size: 10px;
+  color: #FFC56C;
+
+  span {
+    margin-left: 15px;
+  }
+}
+
+.CodeMirror-hints {
+  padding-left: 0 !important;
+  border: 1px solid $wt-color-silver;
+  border-radius: 4px;
+  list-style: none;
+  position: absolute;
+  background-color: #f7f7f7;
+  overflow-y: hidden;
+  z-index: 10;
+  max-height: 20em;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.CodeMirror-hint {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+li.CodeMirror-hint-active {
+  background-color: #d8d8d8;
+  color: #000000;
+}
+
+.CodeMirror-hint .name {
+  margin-right: 20px;
+}
+
+.CodeMirror-hint .tail {
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.CodeMirror-hint .icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+}
+
+.icon {
+  background: url("https://try.kotlinlang.org/static/images/icons_all_sprite.svg");
+}
+
+.icon.class {
+  background: url("https://try.kotlinlang.org/static/images/completion_class.svg");
+}
+
+.icon.package {
+  background: url("https://try.kotlinlang.org/static/images/completion_package.svg");
+}
+
+.icon.method {
+  background: url("https://try.kotlinlang.org/static/images/completion_method.svg");
+}
+
+.icon.genericValue {
+  background: url("https://try.kotlinlang.org/static/images/completion_generic.svg")
+}
+
+.icon.property {
+  background: url("https://try.kotlinlang.org/static/images/completion_property.svg");
+}
+
+div[label]:hover:after {
+  content: attr(label);
+  padding: 0.25rem 0.5rem;
+  white-space: pre;
+  margin-top: -1rem;
+  display: inline-flex;
+  background: $warning-color;
+  border-radius: 3px;
+  margin-left: 1rem;
+  color: black;
+  border: 1px solid $wt-color-code;
+}
