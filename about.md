@@ -14,13 +14,13 @@ We use the [Creative Commons BY-SA](https://github.com/harsh183/gentle_kotlin/bl
 
 ## Contributors
 
-This is a community led project so feel free to contribute, fix typos, or anything really on [Github](https://github.com/harsh183/gentle_kotlin) (and add yourself here too if you prefer). 
+This is a community based project so feel free to contribute, fix typos, or anything really on [Github](https://github.com/harsh183/gentle_kotlin) (and add yourself here too if you prefer). 
 
-* Amirtha Sureshbabu
+* Amirthavarshini Sureshbabu [Github](https://github.com/sureshbabua8) 
 
-* Astha Deep
+* Astha Deep [Behance](https://www.behance.net/asthadeep)
 
-* Harsh Deep
+* Harsh Deep [Github](https://github.com/harsh183/)
 
 ## Tech stuff
 
