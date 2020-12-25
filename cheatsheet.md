@@ -108,19 +108,6 @@ Basically use `print()` to display, `println()` to print with a new line and str
 
 Most of the time if it's just a single variable name the `{}` are not requried and it's just `$<variable name>`
 
-## Console input
-
-```kotlin
-val name: String = readLine()!!
-val age: Int = readLine()!!.toInt()
-val eyePower: Double = readLine()!!.toDouble()
-
-// If you know what you are doing
-val simple = readLine()
-```
-
-`readLine()!!` gives us a line of input as a `String`, the `!!` is to handle the case of `null` input.
-
 ## If
 
 ```kotlin
@@ -383,7 +370,7 @@ var hero1: Hero = Hero("Harsh Deep", "Mage", 100)
 
 ### Data Classes
 
-`data` keyword before the class name sets up the standard utility functions with a class. 
+The `data` keyword before the class name sets up the standard utility functions (Plain Old Java Object) with ain class. 
 
 ```kotlin
 data class Hero(val name: String, val type: String, var healthPoints: Int) {
@@ -414,13 +401,81 @@ val (name, type, hp) = hero2
 println(name) // => Amirtha
 ```
 
-<!-- ### Inheritance -->
+<!-- TODO: ### Inheritance -->
 
-<!-- ### Generic classes -->
+<!-- TODO: ### Generic classes -->
 
-<!-- ## Null safety -->
+<!-- TODO: https://kotlinlang.org/docs/reference/generics.html  Whatever complications exist here -->
 
-<!-- ## Basic testing -->
+## Null types
+
+One of the neatest things about Kotlin comes from it's `null` safe programming idioms. Unless you specifically allow Kotlin to, you will never encounter a `NullPointerException` as null checking becomes the compiler's job.
+
+```kotlin
+val name: String = null // this can't happen
+var age = 19 // Inferred Int
+age = null // this can't happen
+```
+
+For this we add `?` at the end of the variable type to say, this can be of the type or `null`. This applies to function parameters, variable names, returns, class instance variables.
+
+```kotlin
+val name: String? = null
+var age: Int? = 19
+age = null
+```
+
+Or here is an example with functions
+
+```kotlin
+fun getNameIfAgeLegal(name: String, age: Int): String? {
+  if (age >= 18) {
+    return name
+  } else {
+    return null
+  }
+}
+val filteredName = getNameIfAgeLegal("Varshini", 20) // infer String?
+println(filteredName) // => Varshini
+```
+
+## Null safe calling
+
+Kotlin also provides idiomatic ways to deal with functions that may return `null`. You'll often see this kind of code when interfacing with Java or Android libraries especially.
+
+To call a method on something that results in a nullable type (ending with `?`) instead of a normal method call `.` we use `?.` which acts normally when the data is not null and when the data is `null` it just returns `null` instead of trying to call a function on `null` and creating a null pointer exception. The Kotlin compiler will make sure things propogate through the chain.
+
+```kotlin
+data class Person(var name: String, var leftEye: Eye?, var rightEye: Eye?)
+data class Eye(var power: Double)
+
+val me = Person("Harsh", Eye(0.1), Eye(-0.1))
+println(me.leftEye?.power)   // => 0.1
+val her = Person("Varshini", Eye(-5.0), null) // arr
+println(her.rightEye?.power) // => null
+```
+
+The Elvis operator `?:` can be used at the end of null chain calls when you want a default value in case you ended up with `null`.
+
+```kotlin
+val combinedPower = (her.leftEye?.power ?: 0.0) + (her.rightEye?.power ?: 0.0)
+println(combinedPower) // => -5.0
+```
+
+## Console input
+
+```kotlin
+val name: String? = readLine()?.toString()
+val age: Int? = readLine()?.toInt()
+val eyePower: Double? = readLine()?.toDouble()
+
+// Infers String?
+val simple = readLine()
+```
+
+`readLine()` gives us a line of input as a `String`, the `?.` null safe calling takes care of input issues 
+
+<!-- ## TODO: Basic testing -->
 
 ## Coroutines
 
