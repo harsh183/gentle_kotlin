@@ -24,8 +24,6 @@ val quickTax = if (income > 500) income * 0.1 else 0
 
 Note as a block `else` is optional but when it's being used as an expression (ex. the `quickTax` assignment above) then `else` has to be there.
 
-<!-- TODO: Ranges, Boolean Expression --> 
-
 ## When  
 
 For when there are more than two branches possible. This has some very powerful syntax better than C-like languages like `switch`
@@ -43,7 +41,6 @@ when (age) {
     else -> print("Invalid age")
 }
 ```
-<!-- TODO: Collections -->
  
 It works with single values, several values collected, ranges and collections as well as many more complex matchers. 
 

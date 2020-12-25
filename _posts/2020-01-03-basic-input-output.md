@@ -7,9 +7,7 @@ The fundamental difference between all the machines that came before computers
 is because of interactivity. Basically every single computer program you will
 ever deal with is some format of `input`-`process`-`output`.
 
-Here I will show you the most simple ways of dealing with input and output with
-just the console, but the general principles you can apply with pretty much any 
-other formats (websites, apps, bots etc.)
+Here I will show you the most simple ways of dealing with input and output with just the console, but the general principles you can apply with pretty much any  other formats (websites, apps, bots etc.)
 
 ## Printing
 
