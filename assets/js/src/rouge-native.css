@@ -1,5 +1,5 @@
 .cm-s-default  { font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;}
-.cm-s-default.CodeMirror { background: #f9f9f9; color: #A9B7C6; }
+.cm-s-default.CodeMirror { background: #eeeeee; color: #A9B7C6; }
 
 .cm-s-default span.cm-meta { color: #BBB529; }
 .cm-s-default span.cm-number { color: #6897BB; }
@@ -28,7 +28,7 @@
 
 .cm-s-default .CodeMirror-cursor { border-left: 1px solid #A9B7C6; }
 .cm-s-default .CodeMirror-activeline-background { background: #323232; }
-.cm-s-default .CodeMirror-gutters { background: #f9f9f9; border-right: 1px solid #f9f9f9; }
+.cm-s-default .CodeMirror-gutters { background: #eeeeee; border-right: 1px solid #eeeeee; }
 .cm-s-default .CodeMirror-guttermarker { color: #FFEE80; }
 .cm-s-default .CodeMirror-guttermarker-subtle { color: #D0D0D0; }
 .cm-s-default .CodeMirrir-linenumber { color: #606366; }
@@ -39,7 +39,7 @@
 .CodeMirror-hints.native {
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   color: #9C9E9E;
-  background-color: #f9f9f9 !important;
+  background-color: #eeeeee !important;
 }
 
 .CodeMirror-hints.native .CodeMirror-hint-active {
