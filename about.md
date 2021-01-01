@@ -22,6 +22,8 @@ This is a community based project so feel free to contribute, fix typos, or anyt
 
 * Harsh Deep [Github](https://github.com/harsh183/)
 
+* Vinayak Prataap [Github](https://github.com/p-vinayak)
+
 ## Tech stuff
 
 The site source is on [Github](https://github.com/harsh183/gentle_kotlin) running on [jekyll](https://jekyllrb.com/) and hosted by [Netlify](https://www.netlify.com/). The Kotlin runnable playground is supported by the [official Kotlin playground](https://play.kotlinlang.org/), with embedding pulled from their playground source on [GitHub](https://github.com/JetBrains/kotlin-playground).
