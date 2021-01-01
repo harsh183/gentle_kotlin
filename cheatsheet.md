@@ -425,6 +425,38 @@ val mageVarshini = hero2.copy(type = "Mage")
 println(mageVarshini)
 ```
 
+## Inheritance
+
+```kotlin
+open class Person(val name: String,
+                  var age: Int,) {
+    open fun display() {
+        println("Name: $name")
+        println("Age: $age")
+    }
+}
+
+class Student(name: String,
+              age: Int,
+              val mathScore: Double,
+              val scienceScore: Double): Person(name, age) {
+    override fun display() {
+        super.display()
+        println("Math Score: $mathScore")
+        println("Science Score: $scienceScore")
+    }
+}
+
+class Teacher(name: String,
+              age: Int,
+              var students: Collection<Student>): Person(name, age) {
+    override fun display() {
+        super.display()
+        println("Number of students: ${students.size}")
+    }
+}
+```
+
 ## Null types
 
 One of the neatest things about Kotlin comes from it's `null` safe programming idioms. Unless you specifically allow Kotlin to, you will never encounter a `NullPointerException` as null checking becomes the compiler's job.
