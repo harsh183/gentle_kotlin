@@ -148,6 +148,8 @@ fun main() {
 
 Oh if only taxes were this simple. 
 
+## See more
 
+* [Baeldung Console I/O in Kotlin](https://www.baeldung.com/kotlin-console-io)
 
-
+* [I/O in Kotlin: Reading and writing files and command line input/output](https://alvinalexander.com/kotlin/io-in-kotlin-reading-writing-files-command-line-console/)

@@ -113,8 +113,10 @@ In many cases we can chose to omit the type of the variable and the compiler is 
 
 Type inference can make your code often more readable by reducing clutter and make you more productive, but keep in mind that sometimes 
 
-## Links
+## See more
 
-[Kotlin's Primitive Types](https://kotlinlang.org/docs/reference/basic-types.html)
+* [CS 199 IKP: Variable Basics](https://kotlin.cs.illinois.edu/lessons/variable_basics/)
 
-[Java's Naming Conventions](https://www.geeksforgeeks.org/java-naming-conventions/)
+* [Kotlin's Primitive Types](https://kotlinlang.org/docs/reference/basic-types.html)
+
+* [Java's Naming Conventions](https://www.geeksforgeeks.org/java-naming-conventions/)

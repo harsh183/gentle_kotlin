@@ -23,4 +23,6 @@ Add that bit of code in an empty .kt file, then compile and run!  You should see
 
 Pretty much all your code will always go inside the `main()` setup and will often not be mentioned but it is always required. Later as you learn more syntax you can explore splitting code between other functions and classes.
 
+## See more
 
+* [The History of 'Hello World](https://blog.hackerrank.com/the-history-of-hello-world/)
