@@ -68,7 +68,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-You can find the code generated and shown in this guide over at [this repository](https://github.com/p-vinayak/gentlekotlin-ktor-hello-world).
+You can find the code generated and shown in this guide over at [this repository](https://github.com/p-vinayak/gentle-kotlin-ktor).
 
 ## Installation using Gradle from Ktor Starter (Recommended)
 
@@ -108,4 +108,4 @@ fun Application.module(testing: Boolean = false) {
 }
 ```
 
-Now, when you restart your application and visit the same `http://0.0.0.0:8080` url, you should see a text saying "Hello, World!" You can find the code generated and shown in this guide over at [this repository](https://github.com/p-vinayak/gentlekotlin-ktor-hello-world).
+Now, when you restart your application and visit the same `http://0.0.0.0:8080` url, you should see a text saying "Hello, World!" You can find the code generated and shown in this guide over at [this repository](https://github.com/p-vinayak/gentle-kotlin-ktor).
