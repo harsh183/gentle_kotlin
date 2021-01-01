@@ -107,6 +107,12 @@ Kotlin supports the standard set of arithmetic operators, such as addition, subt
 
 While most of the operators should be familiar to you, the one on line 9 may not! The '%' symbol is called the modulus operator.  The statement a % b returns the remainder of a divided by b.  Hence, the val we declared called 'remainder' stores 0 since the remainder of 12 / 2 is 0.
 
+## Type Inference
+
+In many cases we can chose to omit the type of the variable and the compiler is smart and figures it out. This is not a guess by the compiler but an exact result based on math operations on the rest of the program. If it's not able to do that then Kotlin will give an error.
+
+Type inference can make your code often more readable by reducing clutter and make you more productive, but keep in mind that sometimes 
+
 ## Links
 
 [Kotlin's Primitive Types](https://kotlinlang.org/docs/reference/basic-types.html)
