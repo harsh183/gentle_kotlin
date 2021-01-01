@@ -63,3 +63,5 @@ fun main(args: Array<String>) {
     }.start(wait = true)
 }
 ```
+
+You can find the code generated and shown in this guide over at [this](https://github.com/p-vinayak/gentlekotlin-ktor-hello-world) repository.
