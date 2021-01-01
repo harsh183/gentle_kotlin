@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            Gentle Kotlin
 tagline:          'A gentle start to Kotlin'
-description:      'Gentle Kotlin is a set of tutorials and resources for getting into Kotlin'
+description:      'A gentle start to Kotlin'
 url:              https://gentlekotlin.com
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
