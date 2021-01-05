@@ -3,6 +3,8 @@ layout:  post
 title:  Variables, Values, and Basic Math
 ---
 
+<img src="/assets/img/variables_values_basic_math.png" width="500">
+
 ## Introduction to Variables
 
 A variable is a way to store data or information in our code, and what we store can be of numerous types.  Let's look at a simple example:

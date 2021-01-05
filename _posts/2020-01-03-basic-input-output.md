@@ -3,6 +3,8 @@ layout: post
 title: "Console input output"
 ---
 
+<img src="/assets/img/console_input_output.png" width="500">
+
 The fundamental difference between all the machines that came before computers
 is because of interactivity. Basically every single computer program you will
 ever deal with is some format of `input`-`process`-`output`.

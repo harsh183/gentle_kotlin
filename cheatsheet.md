@@ -4,6 +4,8 @@ title: Cheatsheet
 sidebar_link: true
 ---
 
+<img src="/assets/img/cheatsheet.png" width="500">
+
 What's important is not having each and every bit of syntax memorized, so feel free to use this a lot, print it out, bookmark it etc. It's also a good idea to inspire from this and/or make your own as a reference.
 
 ## Hello World

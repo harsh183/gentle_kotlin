@@ -3,6 +3,8 @@ layout:  post
 title:  Hello World
 ---
 
+<img src="/assets/img/hello_world.png" width="500">
+
 Let's start with a fun and popular introductory programming example:  printing Hello world! to the console.  To do so in Kotlin, we use the `println()` function.  It takes any text in quotes and prints it to the console. 
 
 ```kotlin

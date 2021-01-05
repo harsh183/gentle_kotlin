@@ -3,6 +3,8 @@ layout: post
 title: Collections and Arrays
 ---
 
+<img src="/assets/img/collections_and_arrays.png" width="300">
+
 ## Arrays
 
 An array is a container that stores multiple items of the same type; for this reason, Kotlin has primitive type arrays such as IntArray, BooleanArray, etc.  Here's an example of an IntArray:
