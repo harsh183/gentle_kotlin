@@ -154,6 +154,14 @@ Unlike maps, lists can contain duplicate entries.  A list functions like a list;
 
 Maps can't have duplicate keys, which makes values less complicated to find.  With a list, we have to start from either the top or the bottom from the list and work our way through the entire list to find our value.  With maps, if we know the key, we can find the value in one line of code!
 
-# Links
+# See More
 
-[Kotlin collections](https://www.geeksforgeeks.org/kotlin-collections/)
+* [Kotlin collections - Geeks for geeks](https://www.geeksforgeeks.org/kotlin-collections/)
+
+* [Collections overview - Kotlin official docs](https://kotlinlang.org/docs/reference/collections-overview.html)
+
+* [Collections - CS 199 IKP](https://kotlin.cs.illinois.edu/lessons/collections/)
+
+* [Collections overview - Baeldung](https://www.baeldung.com/kotlin-collections-api)
+
+* [Immutable Collections - Baeldung](https://www.baeldungtest.com/kotlin-immutable-collections)

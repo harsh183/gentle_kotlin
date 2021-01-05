@@ -78,12 +78,12 @@ when (age) {
  
 It works with single values, several values collected, ranges and collections as well as many more complex matchers. 
 
-## See more
+## See More
 
-* [CS199 IKP Conditionals](https://kotlin.cs.illinois.edu/lessons/conditionals/)
+* [Conditionals - CS199 IKP](https://kotlin.cs.illinois.edu/lessons/conditionals/)
 
-* [Control Flow: if, when, for, while](https://kotlinlang.org/docs/reference/control-flow.html)
+* [Control Flow: if, when, for, while - Official docs](https://kotlinlang.org/docs/reference/control-flow.html)
 
-* [Guide to the “when{}” Block in Kotlin](https://www.baeldung.com/kotlin-when)
+* [Guide to the “when{}” Block in Kotlin - Baeldung](https://www.baeldung.com/kotlin-when)
 
-* [If-Else Expression in Kotlin](https://www.baeldung.com/kotlin/if-else-expression)
+* [If-Else Expression in Kotlin - Baeldung](https://www.baeldung.com/kotlin/if-else-expression)

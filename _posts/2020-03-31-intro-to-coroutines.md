@@ -82,8 +82,16 @@ Functions that use suspendable functions must also be suspendable, but this pose
 
 What `runBlocking` allows us to do is run coroutines in 'normal' blocking contexts. So like in a main function or anywhere in the code. This way we can program just as normal and then use coroutine based code where we need it. Of course, the more and more coroutine based code we write can give us performance but sometimes it does add complexity. 
 
-## See also
+## See More
 
 * [Your first Coroutine with Kotlin](https://kotlinlang.org/docs/tutorials/coroutines/coroutines-basic-jvm.html)
+
 * [Composing suspendable functions](https://kotlinlang.org/docs/reference/coroutines/composing-suspending-functions.html)
+
 * A gentle introduction to Kotlin Coroutines [video](https://www.youtube.com/watch?v=q6ohvAw7bKM) and [slides](https://speakerdeck.com/amejia481/a-gentle-introduction-to-kotlin-coroutines)
+
+* [Why I stopped using Coroutines in Kotlin](https://dev.to/martinhaeusler/why-i-stopped-using-coroutines-in-kotlin-kg0)
+
+* Forget RxJava: Kotlin Coroutines are all you need. [Part 1](https://proandroiddev.com/forget-rxjava-kotlin-coroutines-are-all-you-need-part-1-2-4f62ecc4f99b) and [Part2 - Channels](https://proandroiddev.com/forget-rxjava-kotlin-coroutines-are-all-you-need-d4dbdb509708)
+
+* [kotlinx.coroutines guide](https://github.com/Kotlin/kotlinx.coroutines/blob/master/coroutines-guide.md) - This one is very long but comprehensive

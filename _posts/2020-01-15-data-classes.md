@@ -77,3 +77,11 @@ val mageVarshini = hero2.copy(type = "Mage")
 println(mageVarshini)
 // => Hero(name=Varshini, type=Mage, healthPoints=100)
 ```
+
+## See More
+
+* [Data Classes - CS 199 IKP](https://kotlin.cs.illinois.edu/lessons/data_classes/)
+
+* [Data Classes - Official Docs](https://kotlinlang.org/docs/reference/data-classes.html)
+
+* [Koltin Data Classes - Baeldung](https://www.baeldung.com/kotlin-data-classes)

@@ -114,3 +114,11 @@ Name: Geoffery Challen
 Age: 4000
 Number of students: 1
 ```
+
+## See More
+
+* [Classes and Inheritance - Official Docs](https://kotlinlang.org/docs/reference/classes.html)
+
+* [Kotlin Delegation Pattern - Baeldung](https://www.baeldung.com/kotlin-delegation-pattern) - An interesting alternative to look into
+
+* [Kotlin Sealed Classes - Baeldung](https://www.baeldung.com/kotlin-sealed-classes) - When you want to restrict inheritance to only a few subtypes

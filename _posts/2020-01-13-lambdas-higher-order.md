@@ -153,10 +153,14 @@ It takes in a size for a list and builds a list based on a function that perform
 
 Higher-order functions are most popular with functional programming.  They allow for cleaner, crisper code and provide a succint way to utilize functions and work with really big data structures!  With these functions we can abstract our logic even further to be more widely applicable; this is especially important for building large models and structures with the code we write. 
 
-## Links
+## See More
 
-[Kotlin Lambdas - GeeksForGeeks](https://www.geeksforgeeks.org/kotlin-lambdas-expressions-and-anonymous-functions/)
+* [map-reduce-filter - CS 199 IKP](https://kotlin.cs.illinois.edu/lessons/map-reduce-filter/)
 
-[Kotlin Higher-Order Functions - GeeksForGeeks](https://www.geeksforgeeks.org/kotlin-higher-order-functions/)
+* [Kotlin Lambdas - GeeksForGeeks](https://www.geeksforgeeks.org/kotlin-lambdas-expressions-and-anonymous-functions/)
 
-[Why Lambdas - StackOverflow](https://stackoverflow.com/questions/16501/what-is-a-lambda-function)
+* [Kotlin Higher-Order Functions - GeeksForGeeks](https://www.geeksforgeeks.org/kotlin-higher-order-functions/)
+
+* [Why Lambdas - StackOverflow](https://stackoverflow.com/questions/16501/what-is-a-lambda-function)
+
+* [Kotlin Filter Collection - Baeldung](https://www.baeldung.com/kotlin-filter-collection)

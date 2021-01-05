@@ -44,4 +44,14 @@ fun main(args: Array<String>) {
 }
 ```
 
+# See More
 
+* [Classes - CS 199 IKP](https://kotlin.cs.illinois.edu/lessons/classes/)
+
+* [Classes and Inheritance - Official Docs](https://kotlinlang.org/docs/reference/classes.html)
+
+* [Inline classes](https://kotlinlang.org/docs/reference/inline-classes.html)
+
+* [Objects in Kotlin - Baeldung](https://www.baeldung.com/kotlin-objects)
+
+* [Kotlin Constructors - Baeldung](https://www.baeldung.com/kotlin-constructors)
