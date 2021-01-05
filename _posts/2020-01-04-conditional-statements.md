@@ -3,7 +3,7 @@ layout: post
 title: Conditional Statements - if and when
 ---
 
-<img src="/assets/img/conditional_statements.png" width="500">
+<img src="/assets/img/conditional_statements.png" width="300">
 
 So far the programs we have written all turn out pretty much the same. So no matter what the input we got the same output. 
 
