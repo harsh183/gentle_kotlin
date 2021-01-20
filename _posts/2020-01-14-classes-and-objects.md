@@ -95,18 +95,48 @@ val varshini = Hero("Varshini", "Warrior")
 
 ## Adding functions
 
+Inside the class body `{}` you can add functions that are only avaible to objects that belong to the class. This is how we create specialized behavior for classes. Functions inside a class can access that object's variables just by mentioning it by name.
+
 ```kotlin
-class Hero(val name: String, val type: String, var healthPoints: Int) {
+class Hero(val name: String, val type: String, var healthPoints: Int = 120) {
     fun attacked(damage: Int) {
-        println("Oh no! $name got attacked with $damage with $healthPoints hp left")
         healthPoints -= damage
+        println("Oh no! $name got attacked with $damage with $healthPoints hp left")
     }
 
     fun healed(hp: Int) {
-        println("Yay! $name got healed with $hp with $healthPoints hp now")
         healthPoints += hp
+        println("Yay! $name got healed with $hp with $healthPoints hp now")
+    }
+}
+```
+
+As you can see above that the syntax for functions is the same but we can access properties of the object as well. To use these functions we use the same `.` dot notation like `object.functionName(...)`
+
+```kotlin
+val varshini = Hero("Varshini", "Warrior")
+varshini.attacked(50) // Oh no
+// => Oh no! Varshini got attacked with 50 with 70 hp left
+varshini.healed(70)   // yay
+// => Yay! Varshini got healed with 70 with 140 hp now
+```
+
+### Calling functions on other objects
+
+Our functions can also work on other objects of the same kind. This is useful because we want objects to interact with each other. Here we can set up functions that take `Hero` objects and call actions on them.
+
+```kotlin
+class Hero(val name: String, val type: String, var healthPoints: Int = 120) {
+    fun attacked(damage: Int) {
+        healthPoints -= damage
+        println("Oh no! $name got attacked with $damage with $healthPoints hp left")
     }
 
+    fun healed(hp: Int) {
+        healthPoints += hp
+        println("Yay! $name got healed with $hp with $healthPoints hp now")
+    }
+    
     fun attack(anotherPlayer: Hero) {
         println("$name attacks ${anotherPlayer.name}")
         val damage = if (type == "Warrior") 50 else 30
@@ -119,21 +149,41 @@ class Hero(val name: String, val type: String, var healthPoints: Int) {
         anotherPlayer.healed(hp)
     }
 }
+```
 
-fun main(args: Array<String>) {
+Look at the two new functions, `attack` and `heal`, they both act differently based on the `type` of the `Hero` and use the `.` dot notation to call things from other classes.
+
+```kotlin
+fun main() {
     val harsh = Hero("Harsh", "Mage", 100)
-    val amirtha = Hero("Amirtha", "Warrior", 120)
-    amirtha.attack(harsh)
+    val varshini = Hero("Varshini", "Warrior")
+    varshini.attack(harsh)
     println()
 
     println("Ooops, let me heal you")
-    amirtha.heal(harsh)
-
+    varshini.heal(harsh)
     println()
+    
     println("You aren't a mage so it wasn't that useful")
     println("I'll do it myself")
     harsh.heal(harsh)
 }
+```
+
+which outputs
+
+```
+Varshini attacks Harsh
+Oh no! Harsh got attacked with 50 with 50 hp left
+
+Ooops, let me heal you
+Varshini casts heal on Harsh
+Yay! Harsh got healed with 10 with 60 hp now
+
+You aren't a mage so it wasn't that useful
+I'll do it myself
+Harsh casts heal on Harsh
+Yay! Harsh got healed with 40 with 100 hp now
 ```
 
 # See More
