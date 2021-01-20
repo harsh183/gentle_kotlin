@@ -376,18 +376,53 @@ nestedApply(10, 5) {it + 1} // f(f(f(f(f(x))))) where f(x) = x + 1
 
 ## Classes and Objects
 
-Classes wrap `data` and `behaviour`. We use the `class` keyword
+Classes wrap `properties` and `behaviour`. We use the `class` keyword
 
 ```kotlin
-class Hero(val name: String, val type: String, var healthPoints: Int) {
-    [...]
+class Hero(val name: String, val type: String, var healthPoints: Int = 120) {
+    fun attacked(damage: Int) {
+        healthPoints -= damage
+        println("Oh no! $name got attacked with $damage with $healthPoints hp left")
+    }
+
+    fun healed(hp: Int) {
+        healthPoints += hp
+        println("Yay! $name got healed with $hp with $healthPoints hp now")
+    }
+    
+    fun attack(anotherPlayer: Hero) {
+        println("$name attacks ${anotherPlayer.name}")
+        val damage = if (type == "Warrior") 50 else 30
+        anotherPlayer.attacked(damage)
+    }
+
+    fun heal(anotherPlayer: Hero) {
+        println("$name casts heal on ${anotherPlayer.name}")
+        val hp = if (type == "Mage") 40 else 10
+        anotherPlayer.healed(hp)
+    }
 }
 ```
 
-`val` makes it read only, `var` means it will change. To initalize
+`val` makes it read only, `var` means it will change. The variables can be accessed within the functions as is and other objects or outside the class you need the `.` dot notation. You also need the `.` notation to call functions outside the class.
+
+To use objects of the class:
 
 ```kotlin
-var hero1: Hero = Hero("Harsh Deep", "Mage", 100)
+fun main() {
+    val harsh: Hero = Hero("Harsh", "Mage", 100)
+    val varshini = Hero("Varshini", "Warrior")
+    varshini.attack(harsh)
+    println()
+
+    println("Ooops, let me heal you")
+    varshini.heal(harsh)
+    println()
+    
+    println("You aren't a mage so it wasn't that useful")
+    println("I'll do it myself")
+    harsh.heal(harsh)
+}
 ```
 
 ### Data Classes

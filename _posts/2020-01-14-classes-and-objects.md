@@ -155,7 +155,7 @@ Look at the two new functions, `attack` and `heal`, they both act differently ba
 
 ```kotlin
 fun main() {
-    val harsh = Hero("Harsh", "Mage", 100)
+    val harsh: Hero = Hero("Harsh", "Mage", 100)
     val varshini = Hero("Varshini", "Warrior")
     varshini.attack(harsh)
     println()
@@ -163,7 +163,7 @@ fun main() {
     println("Ooops, let me heal you")
     varshini.heal(harsh)
     println()
-    
+
     println("You aren't a mage so it wasn't that useful")
     println("I'll do it myself")
     harsh.heal(harsh)
