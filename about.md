@@ -20,7 +20,7 @@ This is a community based project so feel free to contribute, fix typos, or anyt
 
 * Amirthavarshini Sureshbabu [Github](https://github.com/sureshbabua8) 
 
-* Astha Deep [Instagram](https://www.instagram.com/astha.illust/)
+* Avi Deep [Instagram](https://www.instagram.com/astha.illust/)
 
 * Harsh Deep [Github](https://github.com/harsh183/)
 
