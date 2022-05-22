@@ -8,7 +8,7 @@ Many of the efforts from here also led to UIUC's [CS199: IKP - Joyful Kotlin](ht
 
 ## License 
 
-We use the [Creative Commons BY-SA](https://github.com/harsh183/gentle_kotlin/blob/master/LICENSE.md) License. Basically you can use anything from here as you like provided you source back and link to here as well. The sheep illustrations are by [Astha Deep](https://www.instagram.com/astha.illust/) and you can directly attribute to her. 
+We use the [Creative Commons BY-SA](https://github.com/harsh183/gentle_kotlin/blob/master/LICENSE.md) License. Basically you can use anything from here as you like provided you source back and link to here as well. The sheep illustrations are by [Avi Deep](https://www.instagram.com/astha.illust/) and you can directly attribute to him. 
 
 ## Contributors
 
