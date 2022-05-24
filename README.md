@@ -14,9 +14,9 @@ We use the [Creative Commons BY-SA](https://github.com/harsh183/gentle_kotlin/bl
 
 This is a community based project so feel free to contribute, fix typos, or anything really on [Github](https://github.com/harsh183/gentle_kotlin) (and add yourself here too if you prefer). 
 
-* Amirthavarshini Sureshbabu [Github](https://github.com/sureshbabua8) 
+* Amirthavarshini Sureshbabu [Github](https://github.com/sureshbabua8)
 
-* Avi Deep [Instagram](https://www.instagram.com/astha.illust/)
+* Avi Deep [Behance](https://www.behance.net/asthadeep)
 
 * Harsh Deep [Github](https://github.com/harsh183/)
 
